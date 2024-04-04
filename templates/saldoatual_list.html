@@ -1,0 +1,56 @@
+{% extends 'agendaFinanceiraApp/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Lista de Saldos</h1>
+    <input type="text" id="searchInput" placeholder="Pesquisar">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Banco</th>
+                <th>Saldo Atual</th>
+                <th>Data do saldo</th>
+                <th>Data de Criação</th>
+                <th>Data de Modificação</th>
+                <th>Dias de Modificação</th>
+                <!-- Adicione mais colunas conforme necessário -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in cadastros %}
+            <tr>
+                <td>{{ usuario.banco }}</td>
+                <td><a href="{% url 'atualiza_saldoatual' pk=usuario.pk %}">{{ usuario.saldo_atual }}</a></td>
+                <td>{{ usuario.data_atual }}</td>
+                <td>{{ usuario.created_at }}</td>
+                <td>{{ usuario.date_modificacao }}</td>
+                <td>{{ usuario.formatted_date_diff }}</td>
+                <!-- Adicione mais colunas conforme necessário -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.getElementById("searchInput").addEventListener("input", function() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.querySelector(".table");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1]; // Change the index to the column you want to filter
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    });
+</script>
+
+{% endblock content %}

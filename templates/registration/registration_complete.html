@@ -1,0 +1,18 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "E-mail de ativação enviado" %}{% endblock %}
+
+{% block content %}
+<p>{% trans "Verifique seu e-mail para concluir o processo de registro." %}</p>
+{% endblock %}
+
+
+{% comment %}
+**registration/registration_complete.html**
+
+Usado após o preenchimento bem-sucedido do formulário de registro. este
+template não tem variáveis ​​de contexto próprias, e deve simplesmente informar
+o usuário que um e-mail contendo informações de ativação de conta tenha
+foi enviado.
+{% endcomment %}

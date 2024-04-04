@@ -1,0 +1,42 @@
+.cadastro-form textarea, .cadastro-form input {
+    width: 100%;
+}
+
+/*pode ser util no futuro*/
+/*.cadastro-form-div {
+    width: 70%;
+    position: relative;
+    left: 15%;
+}*/
+
+.login-form-div {
+    border-radius: 1px; 
+    width: 30%; 
+    position: relative;
+    left: 33%;
+    top: 10%;
+    padding: 2%;
+}
+
+.login-form input[type=text], input[type=password], input[type=submit] {
+    width: 100%;
+}
+
+.index-titulo h1 {
+    color: darkblue;
+}
+
+.cadastro-usuario-titulo { 
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top: 10%;
+}
+
+.cadastro-usuario-form-div {
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top: 10%;
+}
+

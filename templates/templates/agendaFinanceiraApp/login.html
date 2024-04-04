@@ -1,0 +1,46 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agenda Financeira</title>
+	
+	<!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!-- Meu JS -->
+    <script type="text/javascript" src="{% static 'js\agendaFinanceira.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="{% static 'css\agendaFianceira.css' %}">
+</head>
+<body>
+	<div class=" container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="login-form-div">
+					<h1 class="text-center">Entrar</h1>
+					<p class="text-center">Preencha com suas credencias</p>
+				
+					<form method="post" action="{% url 'login' %}" class="login-form" >
+						{% csrf_token %}
+   	 					<div>{{ form.username.label_tag }}</div>
+    					<div>{{ form.username }}</div>
+							
+    					<div>{{ form.password.label_tag }}</div>
+    					<div>{{ form.password }}</div>
+				
+						<input class="btn btn-default" type="submit" value="login" style="margin-top: 5%"/>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
