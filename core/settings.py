@@ -140,17 +140,7 @@ DATABASES = {
 #     }
 # }
 
-=======
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', 'planoreal_db'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASS', 'pgadmin'),
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
 
->>>>>>> e2c79b52bebafb48dd8019cacc5c133c19ef8b54
 REST_FRAMEWORK = {
     'DATE_FORMAT': "%d/%m/%Y",
     'DATE_INPUT_FORMATS': ["%d-%m-%Y"],
