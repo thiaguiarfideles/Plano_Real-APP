@@ -27,7 +27,7 @@ SECRET_KEY = '1lg5dt77uj^=h-l0133s#5v0t1vm!ai=&g@!n8_t8hm3c(^0uz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "34.230.46.128", "ec2-34-230-46-128.compute-1.amazonaws.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "34.230.46.128", "ec2-34-230-46-128.compute-1.amazonaws.com", "localhost"]
 
 SITE_ID = 1
 
@@ -222,8 +222,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'seumkt@gmail.com'
 EMAIL_HOST_PASSWORD = 'lhksxmysnfptxknf'
 
-SECURE_SSL_REDIRECT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 #PAYPAL_TEST = True
 #PAYPAL_EMAIL = ''
 
