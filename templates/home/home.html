@@ -6,6 +6,10 @@
     <title>Plano Real</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+
     <style>
         .cards {
             display: flex;
@@ -23,7 +27,7 @@
         }
 
         .card {
-            width: 100%; /* Garante que o card ocupe toda a largura do item da lista */
+            width: 70%; /* Garante que o card ocupe toda a largura do item da lista */
             background-color: white;
             border-radius: 1.75rem;
             box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -91,24 +95,50 @@
             max-width: 100%;
             vertical-align: middle;
         }
+        imglogo {
+            height: auto;
+            max-width: 130%;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
 
 <!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
-    <!-- Adicionei "#" como link de exemplo -->
-    <a href="{% url 'login' %}" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
-    <a href="{% url 'admin:index' %}" onclick="w3_close()" class="w3-bar-item w3-button">Adminstrador</a>
-    <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button">Principal</a>
-    <a href="{% url 'auth_logout' %}" onclick="w3_close()" class="w3-bar-item w3-button">Sair</a>
-</nav>
-
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="{% url 'home' %}" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="imglogo">
+            <img src="media/logo-svg.png" class="h-8" alt="Logo" />
+            </div>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="{% url 'login' %}" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 md:dark:hover:bg-transparent" aria-current="page">LOGIN</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'admin:index' %}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">ADMIN</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'home' %}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">HOME</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'auth_logout' %}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">SAIR</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    
 <!-- Top menu -->
-<div class="w3-top">
-    <div class="w3-button w3-padding-10 w3-left" onclick="w3_open()">☰</div>
-</div>
 
 <!-- !PAGE CONTENT! -->
 <!-- First Photo Grid-->
@@ -155,7 +185,10 @@
     function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
     }
+
+    
 </script>
+
 
 </body>
 </html>
