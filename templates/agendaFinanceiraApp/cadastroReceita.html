@@ -2,16 +2,6 @@
 
 {% block content %}
 <div class="row">
-<<<<<<< HEAD
-    <div class="col-md-7 col-sm-7">
-   <div class="col-md-12 col-sm-12">
-        <h1 class="text-center">Cadastro de Receitas</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="input-group input-group-lg">
-                <div class="form-control">
-=======
         <p class="card_text">Cadastro de Receitas.</p>
 </div>
 <div class="container">
@@ -19,18 +9,10 @@
         <div class="col-md-6 col-lg-4 cards_item">
             <div class="card">
                 <div class="card_content">
->>>>>>> origin/main
 
         <form method="post" class="cadastro-form">{% csrf_token %}
             <div class="form-group">
                 <label for="id_cliente" class="form-label"></label>
-<<<<<<< HEAD
-    <div class="col-md-6 col-md-offset-3">
-        <form method="post" class="cadastro-form">{% csrf_token %}
-            <div class="form-group">
-                <label for="id_cliente" class="form-label">Nome do Cliente:</label>
-=======
->>>>>>> origin/main
                 {{ form.cliente }}
                 <script type="text/javascript">
                     $(document).ready(function() {
@@ -101,28 +83,15 @@
                 <label for="id_situacao" class="form-label">Situação:</label>
                 {{ form.situacao }}
             </div>
-<<<<<<< HEAD
-            <div class="form-group">
-
-                <textarea {{ form.observacoes }}>Observações</textarea>
-                <label for="id_observacoes" class="form-label">Observações:</label>
-=======
             <div class="mb-3">
->>>>>>> origin/main
                 {{ form.observacoes }}
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
 </div>
-<<<<<<< HEAD
-
-</div>
-
-=======
 </div>
 </div>
->>>>>>> origin/main
 
 <script>
     $(document).ready(function() {

@@ -4,11 +4,8 @@ from agendaFinanceira.models import Fornecedor
 from django_select2.views import AutoResponseView
 from .models import Cliente, Receita, Despesa, LancamentoContasPagar, Fornecedor, SaldoAtual, SaldoInicial
 from .views import ClienteAutocomplete, cadastrar_receita,cadastrar_fornecedor,cadastrar_contasapagar,cadastrar_despesa,cadastrar_cliente,saldoinicial,saldoatual,update_saldo_atual,cliente_list,fornecedor_list,despesa_list,receitas_list,saldoatual_list,excluir_receita,dashboard
-<<<<<<< HEAD
 from .views import cadastrar_receita,cadastrar_fornecedor,cadastrar_contasapagar,cadastrar_despesa,cadastrar_cliente,saldoinicial,saldoatual,update_saldo_atual,cliente_list,fornecedor_list,despesa_list,receitas_list,saldoatual_list,excluir_receita
 
-=======
->>>>>>> origin/main
 urlpatterns = [
     path('cadastrar_cliente/', views.cadastrar_cliente, name='cadastrar_cliente'),
     path('cliente_list/', views.cliente_list, name='cliente_list'),
@@ -27,12 +24,9 @@ urlpatterns = [
     path('cliente-autocomplete/', ClienteAutocomplete.as_view(), name='cliente-autocomplete'),
     path('excluir_receita/<int:receita_id>/', views.excluir_receita, name='excluir_receita'),
     path('dashboard/', views.dashboard, name='dashboard'),
-<<<<<<< HEAD
     path('cliente-autocomplete/', views.ClienteAutocomplete.as_view(), name='cliente-autocomplete'),
     path('excluir_receita/<int:receita_id>/', views.excluir_receita, name='excluir_receita'),
 
-=======
->>>>>>> origin/main
 
 
 
