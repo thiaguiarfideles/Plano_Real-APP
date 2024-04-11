@@ -5,7 +5,10 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 #from isoduration import format_duration
+<<<<<<< HEAD
 from agendaFinanceira import models
+=======
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 from usuarios.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -15,15 +18,23 @@ from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import authentication_classes, permission_classes
+<<<<<<< HEAD
 from agendaFinanceira.models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual,Cliente
+=======
+from .models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 from agendaFinanceira.forms import ( ClienteForm, FornecedorForm, ReceitaForm, DespesaForm, LancamentoContasPagarForm, SaldoAtlForm, SaldoForm)
 from .serializers import DespesaSerializer, ReceitaSerializer, ClienteSerializer
 from dal import autocomplete
 import logging
+<<<<<<< HEAD
 from django.db.models import Sum,Func
 from django.db.models.functions import ExtractYear, ExtractMonth
 
 
+=======
+from django.db.models import Sum
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 
 
 import datetime
@@ -223,7 +234,10 @@ def update_saldo_atual(request, pk):
     
     return render(request, 'agendaFinanceiraApp/update_saldo_atual.html', {'form': form, 'saldoatual': saldoatual})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 class ClienteAutocomplete(autocomplete.Select2QuerySetView):
     def get_queryset(self):
         qs = Cliente.objects.all()
@@ -232,6 +246,7 @@ class ClienteAutocomplete(autocomplete.Select2QuerySetView):
             qs = qs.filter(nm_cliente__icontains=self.q)
 
         return qs
+<<<<<<< HEAD
 class ClienteListView(ListView):
     model = Cliente
     queryset = Cliente.objects.order_by('nm_cliente')  # Substitua 'your_field' pelo campo pelo qual deseja ordenar
@@ -240,14 +255,21 @@ class ClienteListView(ListView):
     paginate_by = 10
 
 @login_required
+=======
+
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 def cliente_list(request):
     usuario = request.user
     cadastros = Cliente.objects.filter(usuario=usuario.id)
     return render(request, 'cliente_list.html', {
         'cadastros': cadastros
     })
+<<<<<<< HEAD
     
 @login_required
+=======
+
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 def fornecedor_list(request):
     usuario = request.user
     cadastros = Fornecedor.objects.filter(usuario=usuario.id)
@@ -255,7 +277,10 @@ def fornecedor_list(request):
         'cadastros': cadastros
     })
     
+<<<<<<< HEAD
 @login_required    
+=======
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 def despesa_list(request):
     usuario = request.user
     cadastros = Despesa.objects.filter(usuario=usuario.id)
@@ -264,7 +289,11 @@ def despesa_list(request):
     })        
 
 
+<<<<<<< HEAD
 @login_required
+=======
+
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 def receitas_list(request):
     usuario = request.user
     receitas = Receita.objects.filter(usuario=usuario.id)
@@ -288,7 +317,11 @@ def receitas_list(request):
         'total_valor': total_valor
     })
 
+<<<<<<< HEAD
 @login_required    
+=======
+    
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 def saldoatual_list(request):
     usuario = request.user
     cadastros = SaldoAtual.objects.filter(usuario=usuario.id)
@@ -306,13 +339,18 @@ def saldoatual_list(request):
     return render(request, 'saldoatual_list.html', {'cadastros': cadastros})
     
 
+<<<<<<< HEAD
 @login_required
+=======
+
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 class ListarLancamentosView(ListView):
     model = LancamentoContasPagar
     template_name = 'view_apagar.html'
     context_object_name = 'lancamentos'
     
     
+<<<<<<< HEAD
 class Strftime(Func):
     function = 'STRFTIME'
     template = "%(function)s('%Y-%m', %(expressions)s)"
@@ -341,5 +379,7 @@ def dashboard(request):
     return render(request, 'agendaFinanceiraApp/dashboard.html', context)
 
 
+=======
+>>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 
 
