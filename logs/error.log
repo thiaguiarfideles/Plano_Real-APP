@@ -1,0 +1,1463 @@
+[2024-04-10 00:56:17 +0300] [158506] [DEBUG] Current configuration:
+  config: gunicorn.conf.py
+  wsgi_app: None
+  bind: ['127.0.0.1:8000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/projetos/Plano_Real-APP
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/projetos/Plano_Real-APP/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: Plano_Real-APP:core
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fceaa61fc70>
+  on_reload: <function OnReload.on_reload at 0x7fceaa61fd90>
+  when_ready: <function WhenReady.when_ready at 0x7fceaa61feb0>
+  pre_fork: <function Prefork.pre_fork at 0x7fceaa63c040>
+  post_fork: <function Postfork.post_fork at 0x7fceaa63c160>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fceaa63c280>
+  worker_int: <function WorkerInt.worker_int at 0x7fceaa63c3a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fceaa63c4c0>
+  pre_exec: <function PreExec.pre_exec at 0x7fceaa63c5e0>
+  pre_request: <function PreRequest.pre_request at 0x7fceaa63c700>
+  post_request: <function PostRequest.post_request at 0x7fceaa63c790>
+  child_exit: <function ChildExit.child_exit at 0x7fceaa63c8b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fceaa63c9d0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fceaa63caf0>
+  on_exit: <function OnExit.on_exit at 0x7fceaa63cc10>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7fceaa63cd30>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-04-10 00:56:17 +0300] [158506] [INFO] Starting gunicorn 21.2.0
+[2024-04-10 00:56:17 +0300] [158506] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-04-10 00:56:17 +0300] [158506] [DEBUG] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-04-10 00:56:17 +0300] [158506] [ERROR] Retrying in 1 second.
+[2024-04-10 00:56:18 +0300] [158506] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-04-10 00:56:18 +0300] [158506] [DEBUG] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-04-10 00:56:18 +0300] [158506] [ERROR] Retrying in 1 second.
+[2024-04-10 00:56:19 +0300] [158506] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-04-10 00:56:19 +0300] [158506] [DEBUG] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-04-10 00:56:19 +0300] [158506] [ERROR] Retrying in 1 second.
+[2024-04-10 00:56:20 +0300] [158506] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-04-10 00:56:20 +0300] [158506] [DEBUG] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-04-10 00:56:20 +0300] [158506] [ERROR] Retrying in 1 second.
+[2024-04-10 00:56:21 +0300] [158506] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-04-10 00:56:21 +0300] [158506] [DEBUG] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-04-10 00:56:21 +0300] [158506] [ERROR] Retrying in 1 second.
+[2024-04-10 00:56:22 +0300] [158506] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-04-10 01:02:23 +0300] [158688] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/projetos/Plano_Real-APP
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/projetos/Plano_Real-APP/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: core.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f4ce53a3c70>
+  on_reload: <function OnReload.on_reload at 0x7f4ce53a3d90>
+  when_ready: <function WhenReady.when_ready at 0x7f4ce53a3eb0>
+  pre_fork: <function Prefork.pre_fork at 0x7f4ce53c0040>
+  post_fork: <function Postfork.post_fork at 0x7f4ce53c0160>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f4ce53c0280>
+  worker_int: <function WorkerInt.worker_int at 0x7f4ce53c03a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f4ce53c04c0>
+  pre_exec: <function PreExec.pre_exec at 0x7f4ce53c05e0>
+  pre_request: <function PreRequest.pre_request at 0x7f4ce53c0700>
+  post_request: <function PostRequest.post_request at 0x7f4ce53c0790>
+  child_exit: <function ChildExit.child_exit at 0x7f4ce53c08b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f4ce53c09d0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f4ce53c0af0>
+  on_exit: <function OnExit.on_exit at 0x7f4ce53c0c10>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f4ce53c0d30>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-04-10 01:02:23 +0300] [158688] [INFO] Starting gunicorn 21.2.0
+[2024-04-10 01:02:23 +0300] [158688] [DEBUG] Arbiter booted
+[2024-04-10 01:02:23 +0300] [158688] [INFO] Listening at: http://0.0.0.0:8000 (158688)
+[2024-04-10 01:02:23 +0300] [158688] [INFO] Using worker: sync
+[2024-04-10 01:02:23 +0300] [158689] [INFO] Booting worker with pid: 158689
+[2024-04-10 01:02:23 +0300] [158690] [INFO] Booting worker with pid: 158690
+[2024-04-10 01:02:23 +0300] [158691] [INFO] Booting worker with pid: 158691
+[2024-04-10 01:02:23 +0300] [158688] [DEBUG] 3 workers
+[2024-04-09 19:04:24 -0300] [158690] [DEBUG] Closing connection. 
+[2024-04-09 19:04:24 -0300] [158690] [DEBUG] Closing connection. 
+[2024-04-09 19:04:35 -0300] [158691] [DEBUG] Ignored premature client disconnection. No more data after: b"\x16\x03\x01\x02\x0c\x01\x00\x02\x08\x03\x03v\xf3\x97\xcfA\xfa6\xbbb\x8c\xe1\x1e\xc0;\xaexl\x9f\xd9c\xd6\xfb\xeb\x97\xc7\xa8\xea\x9f[F:Y \x92[\x95\xb7\x9e\xcc$;\xf2\x89\xf4\xa4\x15W\x1bv\x14\xc0E\xe8r*|F\x887\xf9\xec\xb8h\xe0\xd3\x00 \xaa\xaa\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x9f\x1a\x1a\x00\x00\x00\x00\x00.\x00,\x00\x00)ec2-34-230-46-128.compute-1.amazonaws.com\xfe\r\x00\xba\x00\x00\x01\x00\x01\x92\x00 I1\x1b\x82\xef\xdcC\xe3\t\xcc\xfd\x087/vFA3\xabE\x7fu\x08\xf5tz\xd6\xf6Ka&\x0f\x00\x90\x96\xf1y\x97\xf00$\xf6\xc15pg;\xaf-\xe2D\x1a\x83\x19U\x13\x114\xf4\xdd\xcb\xd4e7\x1d/\xc5/m\x97\x9f\xcctf\xe0\xffr\x10\xd1\xd4\xe9W\xedk/O\x10\xd1\x9b\xd7j,l\xcc\x8bo\xed\xf6^v\xb8_\x0e\xdfED8g\x1e\xce\xc88SAc\x86XDS\xe8Y\x81@\xdf\xfe\x82\x0e\x94?m\xf7\xa7*\xf1aI\xe8\x0f\x08\xa7\xa8\xaf\x0e\xe5\xc6\x98T\xf7\xa3\xe2\xcd!\xd1\xa7~g\xd8\x18\xad\x94\xe0\xdd\x9fS\xa4n\x8a'\xe7\x95j\x95^\x1c.\xef\xbc\xff\x00-\x00\x02\x01\x01\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06\n\n\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02Di\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\xff\x01\x00\x01\x00\x003\x00+\x00)**\x00\x01\x00\x00\x1d\x00 \xddKw\xc4~\xc1\x12)\xdcN\x89fU\x06-\x94<\xa6-\xbf\x0eI[\xe5`\xca^Z\x06\r\x04o\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x00\n\x00\n\x00\x08**\x00\x1d\x00\x17\x00\x18\x00\x12\x00\x00\xfa\xfa\x00\x01\x00"
+[2024-04-09 19:04:35 -0300] [158689] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02,\x01\x00\x02(\x03\x03\xb44j.\xab\x8d\xdfIw\x97F\xfe\x8a\x13\xce\xf35\xa3\xbaPUIvO\xcb\x17C\x06~S.\xa5 \xdae\x90\xc3d/\xb2\x050rcE\xc5\xee\xc2\xe2a\xd0\xdd\xce4\x8d\xd6\r\x01\xd1\x1aK2E\x08Y\x00 zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xbf**\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01Di\x00\x05\x00\x03\x02h2\x00+\x00\x07\x06\x8a\x8a\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\xff\x01\x00\x01\x00\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x00\x00.\x00,\x00\x00)ec2-34-230-46-128.compute-1.amazonaws.com\x003\x00+\x00)\xba\xba\x00\x01\x00\x00\x1d\x00 6[y3D\xd9\x99[V/\x1dnr\x8d\xcaC\xb2\x14\xfd\x89\x86\x88Dl\xef\x92\x9a-m\x84\x94w\x00\n\x00\n\x00\x08\xba\xba\x00\x1d\x00\x17\x00\x18\x00#\x00\x00\xfe\r\x00\xda\x00\x00\x01\x00\x01\xea\x00 ye\x12\xf4[\x94\xc1^\xae\x83G\xc7B\xfc\xd2\xc1\x95\xf3B\x18Q\x02,\xd9\xc3P\xf5\xd1y\xa6\xba;\x00\xb0\x85\xf91\x82\xc7\xdeZ\x1d\xcc\x9b\x8frM\xad\x83Q\xd6v\xfcq\x8e\xf4B\'1\xd1:s\x81U7\xae\t\xec\xff@\x86\xc5w}\x0fS\x0c\xed\x85e\x0c\xe0R]\xf6 \x0c\x1f-\xccD\x183\xa2\xc4\xb6&`\xb4\x8f]\xac\x08/\x992\xc1\xb6\x0c\xcbX\xb3R\x01B\xee\x13\x7f~\x8b+\xd3\xbbg\xbc\xb9}]\xaf\xf8\x032\x01gG#\xd7\x86\x9d}\x82A\x03\xd7\x0e\xd8\xd23\xd6\xa4FA\x0c4\xa9w\\\xbf\x94\x9e\\\x05\t\x9av\x06\x96\xe0@\xb3\xcfu\xc2\xc1\xef\x9b\x01\x89\x17\xf0\xb7\xc5(H\xc8u\xb3>\xdf R@Wz\xf6\xa8\xa6\x05\xc4\xee"E@\xce\x9bi\x15\xe33\x83\xea\xea\x00\x01\x00'
+[2024-04-10 01:08:51 +0300] [158688] [INFO] Handling signal: term
+[2024-04-09 19:08:51 -0300] [158689] [INFO] Worker exiting (pid: 158689)
+[2024-04-09 19:08:51 -0300] [158690] [INFO] Worker exiting (pid: 158690)
+[2024-04-09 19:08:51 -0300] [158691] [INFO] Worker exiting (pid: 158691)
+[2024-04-10 01:08:52 +0300] [158688] [INFO] Shutting down: Master
+[2024-04-10 01:46:49 +0300] [159246] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/projetos/Plano_Real-APP
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/projetos/Plano_Real-APP/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: core.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7ff6dbf23c70>
+  on_reload: <function OnReload.on_reload at 0x7ff6dbf23d90>
+  when_ready: <function WhenReady.when_ready at 0x7ff6dbf23eb0>
+  pre_fork: <function Prefork.pre_fork at 0x7ff6dbf44040>
+  post_fork: <function Postfork.post_fork at 0x7ff6dbf44160>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ff6dbf44280>
+  worker_int: <function WorkerInt.worker_int at 0x7ff6dbf443a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ff6dbf444c0>
+  pre_exec: <function PreExec.pre_exec at 0x7ff6dbf445e0>
+  pre_request: <function PreRequest.pre_request at 0x7ff6dbf44700>
+  post_request: <function PostRequest.post_request at 0x7ff6dbf44790>
+  child_exit: <function ChildExit.child_exit at 0x7ff6dbf448b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ff6dbf449d0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ff6dbf44af0>
+  on_exit: <function OnExit.on_exit at 0x7ff6dbf44c10>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7ff6dbf44d30>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-04-10 01:46:49 +0300] [159246] [INFO] Starting gunicorn 21.2.0
+[2024-04-10 01:46:49 +0300] [159246] [DEBUG] Arbiter booted
+[2024-04-10 01:46:49 +0300] [159246] [INFO] Listening at: http://0.0.0.0:8000 (159246)
+[2024-04-10 01:46:49 +0300] [159246] [INFO] Using worker: sync
+[2024-04-10 01:46:49 +0300] [159247] [INFO] Booting worker with pid: 159247
+[2024-04-10 01:46:49 +0300] [159248] [INFO] Booting worker with pid: 159248
+[2024-04-10 01:46:49 +0300] [159249] [INFO] Booting worker with pid: 159249
+[2024-04-10 01:46:49 +0300] [159246] [DEBUG] 3 workers
+[2024-04-09 20:21:42 -0300] [159249] [DEBUG] GET /media/receitas.png
+[2024-04-09 20:21:42 -0300] [159247] [DEBUG] GET /media/cad_despesas.png
+[2024-04-09 20:21:42 -0300] [159248] [DEBUG] GET /media/eye_.png
+[2024-04-09 20:22:12 -0300] [159248] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02L\x01\x00\x02H\x03\x03\xb1(<\xce\x1b\xf3f\xe2\xcb\x17\x97\xe0L\xd32O\xcf\x8dl\x98\x166\x1f\xcb[`\xca\xef\x80\x97\x1d\x19 \x9e\xc4\xf2\xde\x9d? \xda\xf6G\xae\x87\xad\\\xb6\xb6]Vmp\x91[\x95I&\xc3\x7ft&#\x86\xf9\x00 ZZ\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xdf\xda\xda\x00\x00\xff\x01\x00\x01\x00\xfe\r\x00\xfa\x00\x00\x01\x00\x01r\x00 [c\xc7C\xe9\x03\x9f\xcc\xf1I\x11\x06z\xaa\x9b;C|:\x01\x1fy\xf2%\xae\x87\x9cs\xf2\xb5\x81\x04\x00\xd0\x1926^D\xcd\xc9u\x93\xc1tu\xc8\x88\xb5\xa2z\x91[(\xb7\xa3\x05"\x0e\xf9\x85\x9a\xb1\xd7\xd7w\xa3\xeb:\x083\xdd\xca\xbfU\x18\x97\xb0$\xa2B;MgC\x04M\x8549a\x7f\x81\xcdF\x07$\xf6\xa4W\xe3]\x8cd\xcc\x86x\x0e\xbe\x19*6F\x11\x8d\x88"\xffU\xee\'\x05\xad\xda&\xf8\r\x8e\x93\xad\x9d\xaaH\xf2zy^\xb7\x1b\xabjA\x9c\xa6\xc4\x16\x8c3+\xdc?l\xfc%Q\x02\x8b\x93\xb6\xc6\xe5~\xc8+\xd9\x9b6}\x03@\xac\x1b\xc1\xf9\xea\x8d\x1c\x89\x9a1\x7f\xaa<ec%Sa\x82^\xaeN\xd9\xbf\x9b,\xeb^\xa8-\x03l\x83Z\x9d;;\xf5\x8a("V\xd0\xe8\xdbu\xf0a\x10\xa9)\x8d\x19_0\x88\xc2G\x03\xb2\xa9\xf4\x13^\x8bn\xfc;\xd4\x92\xb5\x9f\x003\x00+\x00)\xda\xda\x00\x01\x00\x00\x1d\x00 \x1e\xdd6\xc3a\x97\xeb\x95\xd2s\xa4\xd5\xc9\xeb\'Z\xb9\xf1\x17J\x1b\xe5\x81\\\xd5\x96\x8d\x83K\xde\xa6E\x00\n\x00\n\x00\x08\xda\xda\x00\x1d\x00\x17\x00\x18\x00+\x00\x07\x06**\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00\x00\x00.\x00,\x00\x00)ec2-34-230-46-128.compute-1.amazonaws.com\x00-\x00\x02\x01\x01\x00#\x00\x00\x00\x0b\x00\x02\x01\x00Di\x00\x05\x00\x03\x02h2\xfa\xfa\x00\x01\x00'
+[2024-04-09 20:22:12 -0300] [159248] [DEBUG] GET /
+[2024-04-09 20:22:13 -0300] [159247] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02,\x01\x00\x02(\x03\x03Jk\xe8\x03\xed\xc7H\xfe\xd3G*\xdc\xbc\x06p\xa2\xd8\xe5=\xe4d\xbb\xe0\x1e\xd7\xbb\x99U\xe7K\xbf5 \xbdlA\xdf\xb7\x89\x1c}\xb0\xfb\xd88k\x85\xbb\xc5\xce\x9f\xc0PW\x9dC\xef\xd726\xad.\xa6\xee]\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xbf\xba\xba\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\xfe\r\x00\xda\x00\x00\x01\x00\x01\xad\x00 PW=\xb2\x89\xbf\x1f2\x9e\xafy\xde\xa4D\xdeV6B\xa1\x9f\xc9\xcd.\x9d\x1d\xd3\xc0\xf2\x15k\xc7|\x00\xb0\xeb+2\x95um\xd7\xd2\x91\xf4rA\xb0\xfb+,\x03q\xf6G{\xf7\x91W\nTP\xe2K\x83\x981\xbaC\xed\xb19~\xb4\x08\xa6\x98XBD\x9b\xecP\xe7S\x81\xe7;g\xb4\xd0\x90\xa7>\xd7x\xc6\xa3\xfdY\xc0w]q\x86#n`\x7f\xed\x05\xb103\xa7(\xdcn\x1f\xdf\x00S\xdf\xbe\xca\x83\x1c\xbc^\x9f/Ew\x81#\xde\xd5\x99PU\x04\x01e\xd1]fvs\x17\xe0\xe7\xe6\xb08\x84\xdcMB\xe8A\x15\xc1B\x9c\xd8\xea\x9f\x0f\xe8\xf0+\xe6\xee\xde\xeb\xc3S\xa5y\x14Z\xdd:e\xe4\xd6\x86)G\xb6\xc2\xa2=\xe1\xb8\x96\x9e\xc7\xbf\x83\xf6\r3o\xbcu\xe8F\xd3\x7f\x85\x003\x00+\x00)JJ\x00\x01\x00\x00\x1d\x00 \t\xf4\x92|\xe9\x91\x7f\x16\xb6ont\x80\xf6\xdbW\xf6\xbe\x7f\x0f\x84n\x8b\x845\x14\x99B\xf9wqA\x00\n\x00\n\x00\x08JJ\x00\x1d\x00\x17\x00\x18\x00\x00\x00.\x00,\x00\x00)ec2-34-230-46-128.compute-1.amazonaws.com\x00#\x00\x00\xff\x01\x00\x01\x00\x00\x0b\x00\x02\x01\x00\x00\x12\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01Di\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00-\x00\x02\x01\x01\x00+\x00\x07\x06**\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02::\x00\x01\x00'
+[2024-04-09 20:22:13 -0300] [159249] [DEBUG] Ignored premature client disconnection. No more data after: b"\x16\x03\x01\x02\x0c\x01\x00\x02\x08\x03\x03\xa6{\x95\x10\x01\xc2\xef\xb1\xf3\xd95\xdeS\xff>\xdc\x89\xec\xf2\x87[\xee\x018\xe4h\x11\x01\xfbd\xa1\xb4 \xfa[;o\xf3\x04\xf4\xdd\x10\x8b\x13\x0eImwvh\xb9\xd7e\xeb\x8d\x9f\xbdS\x12\xc3g\x1c\x84\x943\x00 **\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x9f\xaa\xaa\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\xfe\r\x00\xba\x00\x00\x01\x00\x01/\x00 \x051\xcb\x83|\x87\xd5,\xbd,.\x1a\xbd~\x18-\x9f\xba\x00\x93\xf2\xc7\xa70\xe0\xc6\x1ay\xaf0\x8aU\x00\x90\xdbl\xd5L@6\xa0a\xf1\xcdz\xf6t\x1b\xf7>\x90\xc6/\x0fQ\xdb\xd8\x7fC\x9a=\xcfF\x0b\x8f \xebO\x1e,\xdb(\x18\xbe=\x82\xce\x87\xbeV\x19\x0c9=\xda\xf0\x8e\x05V\xe7\x87\x8a\xed\xfc\x87\xb1^M\x1c\x1e\xca~,\xfc\x83\xca\xef\x99\x7f%C,C\xd2z'`'\xed\x8c\x07Y*9SqL\xe1\xe9\xf1k\xf7\xb1X\x8e'\xd8\xd8\xc3\x91\xe6\xc2\x87\x8a\x10\xc3\xf5\xf6\xe7\xab\xeb\xf9^W\x9d}\xf2\xfa\x91\xd3 R\xf00A\xc9\xea\xa9e4?\x00\xd4M7\x9d#F\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\x00\x00\x00.\x00,\x00\x00)ec2-34-230-46-128.compute-1.amazonaws.com\x00-\x00\x02\x01\x01\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1Di\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00\x0b\x00\x02\x01\x00\x00\n\x00\n\x00\x08\xda\xda\x00\x1d\x00\x17\x00\x18\x00+\x00\x07\x06**\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x00+\x00)\xda\xda\x00\x01\x00\x00\x1d\x00 \xd2\xb2\x84\x13\x8a\x07\xd3\xa7Bm\xef\xd2b2\xd3]\xf19\xde\xcd\xaa\xee:\xd7Ycw\xcb\xc4K\x01z\xff\x01\x00\x01\x00\x1a\x1a\x00\x01\x00"
+[2024-04-10 02:22:43 +0300] [159246] [CRITICAL] WORKER TIMEOUT (pid:159248)
+[2024-04-09 20:22:43 -0300] [159248] [INFO] Worker exiting (pid: 159248)
+[2024-04-10 02:22:43 +0300] [159246] [ERROR] Worker (pid:159248) exited with code 1
+[2024-04-10 02:22:43 +0300] [159246] [ERROR] Worker (pid:159248) exited with code 1.
+[2024-04-10 02:22:43 +0300] [159407] [INFO] Booting worker with pid: 159407
+[2024-04-09 20:50:51 -0300] [159249] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x00\xca\x01\x00\x00\xc6\x03\x03\xeb\x16\xd5\x12>\xc8\x06\xa9t\xe1"\xbe0\x88\xb9\xbad\xed\x0fq>%\xeb\x18d=\x1f\x8d\xb4\xd8\'\xb9\x00\x00h\xcc\x14\xcc\x13\xc0/\xc0+\xc00\xc0,\xc0\x11\xc0\x07\xc0\'\xc0#\xc0\x13\xc0\t\xc0(\xc0$\xc0\x14\xc0\n\xcc\x15\x00\x9e\x00\x9f\x00g\x00k\x003\x009\x00\x9c\x00\x9d\x00\x05\x00\x04\x00<\x00=\x00/\x005\xc0\x12\x00\x16\x00\n\x00\x03\x00\x08\x00\x06\x00\x14\x00\x11\x00\x19\x00\x17\x002\xc0\x08\x00\x12\x00\x13\x00\x15\x008\x00@\x00f\x00j\x00\xa2\x00\xa3\x01\x00\x005\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\n\x00\x08\x00\x06\x00\x17\x00\x18\x00\x19\x00\x0b\x00\x02\x01\x00\x00\r\x00\x0c\x00\n\x04\x01\x04\x03\x02\x01\x02\x03\x02\x02\xff\x01\x00\x01\x00\x00\x0f\x00\x01\x01'
+[2024-04-09 20:50:51 -0300] [159407] [DEBUG] Ignored premature client disconnection. No more data after: b"\x16\x03\x01\x00\xee\x01\x00\x00\xea\x03\x03\x0c\x9e\x184\xfa\x1a\r\xc0b9\x91\xd9\xab\x11zd\xaa[\nGQCA[\x92\xe2\x0f,\x0b\xb1N\x84 5\xec\xe0\xe8yO}\xf7\x1e\xec\xf1^4@iQv\xc59\xde\xf7\x8b\xa2\xf8\xe1w\x84\x97\x1a\xb0\xfb\xec\x00&\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\t\xc0\x13\xc0\n\xc0\x14\x00\x9c\x00\x9d\x00/\x005\xc0\x12\x00\n\x13\x01\x13\x02\x13\x03\x01\x00\x00{\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\n\x00\n\x00\x08\x00\x1d\x00\x17\x00\x18\x00\x19\x00\x0b\x00\x02\x01\x00\x00\r\x00\x1a\x00\x18\x08\x04\x04\x03\x08\x07\x08\x05\x08\x06\x04\x01\x05\x01\x06\x01\x05\x03\x06\x03\x02\x01\x02\x03\xff\x01\x00\x01\x00\x00\x12\x00\x00\x00+\x00\t\x08\x03\x04\x03\x03\x03\x02\x03\x01\x003\x00&\x00$\x00\x1d\x00 G\xfc\xb7kT\xedc\xf7R\x07\xb6r\x1a\xb3\xeeG\xec\xf0\x91k\x92y$\xa5;o+\xeeT!'\x19"
+[2024-04-09 21:27:56 -0300] [159407] [DEBUG] GET /
+[2024-04-09 21:28:27 -0300] [159407] [DEBUG] GET /
+[2024-04-09 21:28:30 -0300] [159249] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\xce\xcf\xdcu<\x0c\xed\xa6\xecG\xc9\xa1i\xa2\xf6\xbe\xab\x95\x97\x86\xce\xb5\xbej"\xaaL\x14A\xace,\x00\x00\x1a\xc0/\xc0+\xc0\x11\xc0\x07\xc0\x13\xc0\t\xc0\x14\xc0\n\x00\x05\x00/\x005\xc0\x12\x00\n\x01\x00\x004\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\n\x00\x08\x00\x06\x00\x17\x00\x18\x00\x19\x00\x0b\x00\x02\x01\x00\x00\r\x00\x10\x00\x0e\x04\x01\x04\x03\x02\x01\x02\x03\x04\x01\x05\x01\x06\x01\xff\x01\x00\x01\x00'
+[2024-04-09 21:28:31 -0300] [159247] [DEBUG] GET /favicon.ico
+[2024-04-09 21:28:52 -0300] [159247] [DEBUG] GET /
+[2024-04-09 21:29:15 -0300] [159407] [DEBUG] CONNECT 443
+[2024-04-10 04:46:11 +0300] [159246] [INFO] Handling signal: term
+[2024-04-09 22:46:11 -0300] [159247] [INFO] Worker exiting (pid: 159247)
+[2024-04-09 22:46:11 -0300] [159249] [INFO] Worker exiting (pid: 159249)
+[2024-04-09 22:46:11 -0300] [159407] [INFO] Worker exiting (pid: 159407)
+[2024-04-10 04:46:11 +0300] [159246] [ERROR] Worker (pid:159249) was sent SIGTERM!
+[2024-04-10 04:46:11 +0300] [159246] [ERROR] Worker (pid:159407) was sent SIGTERM!
+[2024-04-10 04:46:11 +0300] [159246] [ERROR] Worker (pid:159247) was sent SIGTERM!
+[2024-04-10 04:46:11 +0300] [159246] [INFO] Shutting down: Master
+[2024-04-10 04:56:06 +0300] [160124] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 1
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/projetos/Plano_Real-APP
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/projetos/Plano_Real-APP/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: Plano_Real-APP.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fd6ab3a7c70>
+  on_reload: <function OnReload.on_reload at 0x7fd6ab3a7d90>
+  when_ready: <function WhenReady.when_ready at 0x7fd6ab3a7eb0>
+  pre_fork: <function Prefork.pre_fork at 0x7fd6ab3c8040>
+  post_fork: <function Postfork.post_fork at 0x7fd6ab3c8160>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fd6ab3c8280>
+  worker_int: <function WorkerInt.worker_int at 0x7fd6ab3c83a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fd6ab3c84c0>
+  pre_exec: <function PreExec.pre_exec at 0x7fd6ab3c85e0>
+  pre_request: <function PreRequest.pre_request at 0x7fd6ab3c8700>
+  post_request: <function PostRequest.post_request at 0x7fd6ab3c8790>
+  child_exit: <function ChildExit.child_exit at 0x7fd6ab3c88b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fd6ab3c89d0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fd6ab3c8af0>
+  on_exit: <function OnExit.on_exit at 0x7fd6ab3c8c10>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7fd6ab3c8d30>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-04-10 04:56:06 +0300] [160124] [INFO] Starting gunicorn 21.2.0
+[2024-04-10 04:56:06 +0300] [160124] [DEBUG] Arbiter booted
+[2024-04-10 04:56:06 +0300] [160124] [INFO] Listening at: http://0.0.0.0:8000 (160124)
+[2024-04-10 04:56:06 +0300] [160124] [INFO] Using worker: sync
+[2024-04-10 04:56:06 +0300] [160125] [INFO] Booting worker with pid: 160125
+[2024-04-10 04:56:06 +0300] [160125] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/projetos/Plano_Real-APP/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/projetos/Plano_Real-APP/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/projetos/Plano_Real-APP/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/projetos/Plano_Real-APP/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/projetos/Plano_Real-APP/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/projetos/Plano_Real-APP/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/projetos/Plano_Real-APP/venv/lib/python3.10/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'Plano_Real-APP'
+[2024-04-10 04:56:06 +0300] [160125] [INFO] Worker exiting (pid: 160125)
+[2024-04-10 04:56:06 +0300] [160124] [ERROR] Worker (pid:160125) exited with code 3
+[2024-04-10 04:56:06 +0300] [160124] [ERROR] Shutting down: Master
+[2024-04-10 04:56:06 +0300] [160124] [ERROR] Reason: Worker failed to boot.
+[2024-04-10 05:07:24 +0300] [160257] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/projetos/Plano_Real-APP
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/projetos/Plano_Real-APP/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: core.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f3d2d93fc70>
+  on_reload: <function OnReload.on_reload at 0x7f3d2d93fd90>
+  when_ready: <function WhenReady.when_ready at 0x7f3d2d93feb0>
+  pre_fork: <function Prefork.pre_fork at 0x7f3d2d95c040>
+  post_fork: <function Postfork.post_fork at 0x7f3d2d95c160>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3d2d95c280>
+  worker_int: <function WorkerInt.worker_int at 0x7f3d2d95c3a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3d2d95c4c0>
+  pre_exec: <function PreExec.pre_exec at 0x7f3d2d95c5e0>
+  pre_request: <function PreRequest.pre_request at 0x7f3d2d95c700>
+  post_request: <function PostRequest.post_request at 0x7f3d2d95c790>
+  child_exit: <function ChildExit.child_exit at 0x7f3d2d95c8b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3d2d95c9d0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3d2d95caf0>
+  on_exit: <function OnExit.on_exit at 0x7f3d2d95cc10>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f3d2d95cd30>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-04-10 05:07:24 +0300] [160257] [INFO] Starting gunicorn 21.2.0
+[2024-04-10 05:07:24 +0300] [160257] [DEBUG] Arbiter booted
+[2024-04-10 05:07:24 +0300] [160257] [INFO] Listening at: unix:/run/gunicorn.sock (160257)
+[2024-04-10 05:07:24 +0300] [160257] [INFO] Using worker: sync
+[2024-04-10 05:07:24 +0300] [160259] [INFO] Booting worker with pid: 160259
+[2024-04-10 05:07:24 +0300] [160260] [INFO] Booting worker with pid: 160260
+[2024-04-10 05:07:24 +0300] [160261] [INFO] Booting worker with pid: 160261
+[2024-04-10 05:07:24 +0300] [160257] [DEBUG] 3 workers
+[2024-04-09 23:10:47 -0300] [160261] [DEBUG] GET /
+[2024-04-10 05:13:11 +0300] [160257] [INFO] Handling signal: term
+[2024-04-09 23:13:11 -0300] [160259] [INFO] Worker exiting (pid: 160259)
+[2024-04-09 23:13:11 -0300] [160260] [INFO] Worker exiting (pid: 160260)
+[2024-04-09 23:13:11 -0300] [160261] [INFO] Worker exiting (pid: 160261)
+[2024-04-10 05:13:11 +0300] [160257] [INFO] Shutting down: Master
+[2024-04-10 05:13:11 +0300] [160373] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/projetos/Plano_Real-APP
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/projetos/Plano_Real-APP/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: core.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f61951a3c70>
+  on_reload: <function OnReload.on_reload at 0x7f61951a3d90>
+  when_ready: <function WhenReady.when_ready at 0x7f61951a3eb0>
+  pre_fork: <function Prefork.pre_fork at 0x7f61951c0040>
+  post_fork: <function Postfork.post_fork at 0x7f61951c0160>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f61951c0280>
+  worker_int: <function WorkerInt.worker_int at 0x7f61951c03a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f61951c04c0>
+  pre_exec: <function PreExec.pre_exec at 0x7f61951c05e0>
+  pre_request: <function PreRequest.pre_request at 0x7f61951c0700>
+  post_request: <function PostRequest.post_request at 0x7f61951c0790>
+  child_exit: <function ChildExit.child_exit at 0x7f61951c08b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f61951c09d0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f61951c0af0>
+  on_exit: <function OnExit.on_exit at 0x7f61951c0c10>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f61951c0d30>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-04-10 05:13:11 +0300] [160373] [INFO] Starting gunicorn 21.2.0
+[2024-04-10 05:13:11 +0300] [160373] [DEBUG] Arbiter booted
+[2024-04-10 05:13:11 +0300] [160373] [INFO] Listening at: unix:/run/gunicorn.sock (160373)
+[2024-04-10 05:13:11 +0300] [160373] [INFO] Using worker: sync
+[2024-04-10 05:13:11 +0300] [160375] [INFO] Booting worker with pid: 160375
+[2024-04-10 05:13:11 +0300] [160376] [INFO] Booting worker with pid: 160376
+[2024-04-10 05:13:11 +0300] [160377] [INFO] Booting worker with pid: 160377
+[2024-04-10 05:13:11 +0300] [160373] [DEBUG] 3 workers
+[2024-04-10 06:25:16 +0300] [161358] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/projetos/Plano_Real-APP
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/projetos/Plano_Real-APP/logs/error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: core.wsgi
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f13e47d3c70>
+  on_reload: <function OnReload.on_reload at 0x7f13e47d3d90>
+  when_ready: <function WhenReady.when_ready at 0x7f13e47d3eb0>
+  pre_fork: <function Prefork.pre_fork at 0x7f13e47f0040>
+  post_fork: <function Postfork.post_fork at 0x7f13e47f0160>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f13e47f0280>
+  worker_int: <function WorkerInt.worker_int at 0x7f13e47f03a0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f13e47f04c0>
+  pre_exec: <function PreExec.pre_exec at 0x7f13e47f05e0>
+  pre_request: <function PreRequest.pre_request at 0x7f13e47f0700>
+  post_request: <function PostRequest.post_request at 0x7f13e47f0790>
+  child_exit: <function ChildExit.child_exit at 0x7f13e47f08b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f13e47f09d0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f13e47f0af0>
+  on_exit: <function OnExit.on_exit at 0x7f13e47f0c10>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f13e47f0d30>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-04-10 06:25:16 +0300] [161358] [INFO] Starting gunicorn 21.2.0
+[2024-04-10 06:25:16 +0300] [161358] [DEBUG] Arbiter booted
+[2024-04-10 06:25:16 +0300] [161358] [INFO] Listening at: http://0.0.0.0:8000 (161358)
+[2024-04-10 06:25:16 +0300] [161358] [INFO] Using worker: sync
+[2024-04-10 06:25:16 +0300] [161359] [INFO] Booting worker with pid: 161359
+[2024-04-10 06:25:16 +0300] [161360] [INFO] Booting worker with pid: 161360
+[2024-04-10 06:25:16 +0300] [161361] [INFO] Booting worker with pid: 161361
+[2024-04-10 06:25:16 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 00:27:33 -0300] [161359] [DEBUG] Closing connection. 
+[2024-04-10 00:29:43 -0300] [161359] [DEBUG] GET /
+[2024-04-10 00:29:43 -0300] [161361] [DEBUG] GET /media/receitas.png
+[2024-04-10 00:29:43 -0300] [161359] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 00:29:43 -0300] [161360] [DEBUG] GET /media/eye_.png
+[2024-04-10 00:29:44 -0300] [161359] [DEBUG] GET /favicon.ico
+[2024-04-10 00:30:24 -0300] [161359] [DEBUG] Closing connection. 
+[2024-04-10 00:30:24 -0300] [161359] [DEBUG] Closing connection. 
+[2024-04-10 06:30:40 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161360)
+[2024-04-10 00:30:40 -0300] [161360] [INFO] Worker exiting (pid: 161360)
+[2024-04-10 06:30:40 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161361)
+[2024-04-10 00:30:40 -0300] [161361] [INFO] Worker exiting (pid: 161361)
+[2024-04-10 06:30:40 +0300] [161358] [ERROR] Worker (pid:161361) exited with code 1
+[2024-04-10 06:30:40 +0300] [161358] [ERROR] Worker (pid:161361) exited with code 1.
+[2024-04-10 06:30:40 +0300] [161358] [ERROR] Worker (pid:161360) exited with code 1
+[2024-04-10 06:30:40 +0300] [161358] [ERROR] Worker (pid:161360) exited with code 1.
+[2024-04-10 06:30:40 +0300] [161417] [INFO] Booting worker with pid: 161417
+[2024-04-10 06:30:40 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 06:30:40 +0300] [161418] [INFO] Booting worker with pid: 161418
+[2024-04-10 06:30:40 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 00:30:52 -0300] [161359] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x0c\x01\x00\x02\x08\x03\x03\xc8\xa4\x857\xa8:\xdc}N\x90\\\xa6\x18\xa2bY\xaa\xd5$?\xd4?\xd9\xc4\xb4m\x89\xc4\xc5\x1d\x08\xbe \xfb\x86\xb7\x15\x81V\x1e\x87\xd4\xd6\xfe#J\xc9\xfd\xce\x06\x02\xb8\xa7\xef`,a\xb6\xb6\xa7\tE\x1c\x11F\x00 \n\n\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x9fzz\x00\x00\xff\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\xfe\r\x00\xba\x00\x00\x01\x00\x01\xb8\x00 \xd5\x9c\x98l\xe0\xcb\xe23\x11\xe2\xbcv\xc7GF\xbcu\x88\x91d\xaf\xe1\xe0\xea\xa2\xbeY\xd8\t\xc2\\Q\x00\x90\x9a\xd3\xf0q\x17::\xb3M:\xd4\xea\xae\xb0P\xf5C\x04\x85\x10m\xfe\xdc\xdc\xe1\xe0\xa9x\xde4\x8c\x1e\xe3\x11\rVn\xe1\xac\x07IQ\xabqnx\xc2}>\x1d\xa9:Qa\xa9\xff\x98\x15\x0bT78)\x7fzDg\x04\x0fj=\xb4\xc3\x84\xbc+\xf2\x89^\xe4@7\xf6\xf4\x06\xbf\x1b\x91\xe9PD\xd8G\x91\xaf"C\xb2\x14\xf3\x06\xce\x07\xabw\xb0\x15\xe1\x84 {\x0c\xee\x90\x19\xc4O\x8e\x1e\xb4\x07\xff\xcbC\xa5c\x04AkQ\xbe\xe1L\xfeZ\xbfd;\x03;V\xa6\xcez\x00\n\x00\n\x00\x08\n\n\x00\x1d\x00\x17\x00\x18\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x003\x00+\x00)\n\n\x00\x01\x00\x00\x1d\x00 \xa7\xcd\x8a\xb3\xcbf3\xeb\xd7\xf7\x9d7\xe2\xf4\xdc\x00\x87\x8a\x95\x81\x8b\x12=U\xb2\xe0\xa9\x9b\xc6\xb1"{\x00\x0b\x00\x02\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06JJ\x03\x04\x03\x03\x00\x12\x00\x00\x00\x00\x00.\x00,\x00\x00)ec2-34-230-46-128.compute-1.amazonaws.com\x00-\x00\x02\x01\x01Di\x00\x05\x00\x03\x02h2\x00#\x00\x00\xda\xda\x00\x01\x00'
+[2024-04-10 00:30:52 -0300] [161359] [DEBUG] Closing connection. 
+[2024-04-10 00:30:52 -0300] [161359] [DEBUG] GET /
+[2024-04-10 00:30:54 -0300] [161359] [DEBUG] Closing connection. 
+[2024-04-10 00:31:00 -0300] [161359] [DEBUG] GET /
+[2024-04-10 00:31:01 -0300] [161417] [DEBUG] Ignored premature client disconnection. No more data after: b"\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\xedX*-\x9fa\x84'l\xfc\xcf<\xb4\xcc\x9f\x7f\x1d\xae\xe4\x80)E\x16#G\x9f\xec\x8e\x91\xd1\x88K \x173\xa9`>\x0f\xc7Ev\xb0PfZ\xe0Y\xf7\xb5)\x11\xceY}z:\x85\xf4\xc2\xae\x0e\xe4\x98\x80\x00 \xca\xca\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x9a\x9a\x00\x00\x00\n\x00\n\x00\x08\x9a\x9a\x00\x1d\x00\x17\x00\x18\x00+\x00\x07\x06\xba\xba\x03\x04\x03\x03\x003\x00+\x00)\x9a\x9a\x00\x01\x00\x00\x1d\x00 S\xffl\x8b\xd9z\x1f8\xc8x\x8cw\xa1\xe5\x97*\x1e\x154\xef\x0b\xbd\x83[\x15\xabD\xf3p\xf0\xaa!\x00\x17\x00\x00Di\x00\x05\x00\x03\x02h2\xff\x01\x00\x01\x00\x00#\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\xfe\r\x00\xda\x00\x00\x01\x00\x01\xf2\x00 ~\xeb\x1d1{3\xe6\xe7Y\x98V\x96\x19\x97\xda`\xd4o\x1a\xa6\x80\xa3\\\xf5\x16\x16\x03\xcf\t\xd1\xc2C\x00\xb0\xe0\x8b\x83\xa3^#\xfe!;[\x91\xbe'0\xedjz8\x15\\\x83\xe0\xe6\xdd\x95\x85\xddA\xdb`\xc5\x85/\xe8#\x03\xcdz\x80'0\xe7`\x18\xf9\xce\xc3,t\x8a8\x82WG\xd0\xffLd+\x13\x12MF\xf4\xe8\xd0P\xfd@\x14\xd5=~\x1b\xa6\x02\x0e\x99\x14<\x8f\xc9\xd2\xb09\xea\x90\x12V\x94y\x05\xd2\xd1\xbb[n\x10^f\xc9\xcb\x12w\xac\xa0\xdbO\xe2\xd0}:&\xe8X\xc9+:\x0fL\x9fcI\x1aEQB\xbfd ) w*\xa3\xb8\x92^)\x1fT\xc2\xc95\xe8\x10\xc9\x97\xb7\xaeD\xfb\xd4lnG\xfc\x04\xbe^{\xa5\xb0P<\xb4q\x80-\xb9=N\xf2!i\x1c\x00\x0b\x00\x02\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02ZZ\x00\x01\x00\x00\x15\x00\x02\x00\x00"
+[2024-04-10 00:31:02 -0300] [161418] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02:\x01\x00\x026\x03\x03\xaa\xc2\xc7\x8f[X\xd5\xc0H\x0b\xa6K\xfa\x95[\x0cC{\xce\xf7e\xef\xad\x80,7\x1ej\x19]V\x8a e\xca-\xed\x91\xc7\x07\xd0 \xcf\x87y\x14h\x06\xfb_\xcf\x0f\xb3\x8a\xd4\x9f\t\x89\xbb\xe8\x1cj^p\xe0\x00 ::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xcd\xda\xda\x00\x00\xfe\r\x01\x1a\x00\x00\x01\x00\x01\xae\x00 D\x9a\xb8\x85/=\xd6\x06\xf8\x97\xdf1\xf5\xf6s\xd5;W2\xf7\xbb\xc7w\x83D.\xee\xb0T\x1bq1\x00\xf0\x96X\xd1\xf3\x806!\xc6Z\xfcK\x9eq\xee8\x07\xb7\xda\xd8\xb0\x8eh\xc4\x8ec\t\x16\xc6\xc6\xc0\x1bK\x06\xa6\x85B\x81>f\xfb\x93 \x9e\x8a\x96\xa8\xd2hm"\x82\xaf\x7f\xae\xf9f\xbf\xf7\xbb\x1b\xbe\xd7<>\x85N\x1a\xc5\x90g\x84\xd9 \xb2\xfa@\x13{\xec\x016\x89\x8c/\x18=\xe2\xe0\xab\xa3\xd4\xfd\x981\xffXZ\xd3v\xb8\xfb\xc6\n$\x86\x9a\x99\x9d\xd9\x8e\x03\x12\x0f5\xf0$\x92M\xa9n\xf2\xc0qV\xb3vLb\x19\xff\xee\xa56x\xafE\xd8\xaf\xac\ne\xac\xf4\xca`L\xec%\x13\xba\xb45\xbfS\xd0\x87mpX`\xcb\xac\x07\xee\xebF\x06\xee\xf9\xaf\x93\x9aW\x8a\x04c\x92:7\xa64z\x9e>|(w\xa1\xb2\xc73w$-<\xe9\x80\xaf\xae\xec\x94\x19\xdd\xbd\xc5\x16<\xf9{\x1dn\x12\xf7\xc8\xea\xf2MY\x04\x08\xcccQAK\x96\xf7|a\x04\xfb\xc5\x99q\t]\xe6\xdf\xa7z\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01\xff\x01\x00\x01\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01Di\x00\x05\x00\x03\x02h2\x003\x00+\x00)\x9a\x9a\x00\x01\x00\x00\x1d\x00 i\xd0\xd5\x8f\xfc4\x9a>\x18\xc9u\xfbb\xbb\xcf\xdf\n\xe8S\xd8M\xe5W\xabwJ\xdb\xd6\xf2\xd4m_\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\n\x00\x08\x9a\x9a\x00\x1d\x00\x17\x00\x18\x00\x12\x00\x00\x00+\x00\x07\x06::\x03\x04\x03\x03\x00#\x00\x00**\x00\x01\x00'
+[2024-04-10 00:31:04 -0300] [161359] [DEBUG] Closing connection. 
+[2024-04-10 00:32:19 -0300] [161418] [DEBUG] GET /
+[2024-04-10 00:32:24 -0300] [161359] [DEBUG] Closing connection. 
+[2024-04-10 00:35:31 -0300] [161359] [DEBUG] GET /
+[2024-04-10 00:35:31 -0300] [161417] [DEBUG] GET /media/receitas.png
+[2024-04-10 00:35:31 -0300] [161359] [DEBUG] GET /media/eye_.png
+[2024-04-10 00:35:31 -0300] [161359] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 00:35:32 -0300] [161359] [DEBUG] GET /favicon.ico
+[2024-04-10 00:35:40 -0300] [161417] [DEBUG] GET /agendaFinanceira/cadastrar_receita/
+[2024-04-10 00:35:40 -0300] [161417] [DEBUG] GET /accounts/login/
+[2024-04-10 00:35:41 -0300] [161417] [DEBUG] GET /media/logo-fundo.png
+[2024-04-10 00:35:50 -0300] [161417] [DEBUG] POST /accounts/login/
+[2024-04-10 00:35:50 -0300] [161417] [DEBUG] GET /
+[2024-04-10 00:35:58 -0300] [161418] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\xd8\xf1\xc2\x88\xaa\x97C/\xb7+\x19]wmx(\x1dwHj\x1e\xa7\xfc]\xac\xd7\x07"O\x0b\xd6r \x00\x91\xc0|\x9blH\x1ad\xb8\xc1h\xdd\xee\xa5_HN$~\xaem\x03\x7fH\x94\x1c\x0b\xa69\xf0<\x00 \xea\xea\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\xea\xea\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00-\x00\x02\x01\x01\x00\n\x00\n\x00\x08\xca\xca\x00\x1d\x00\x17\x00\x18\xff\x01\x00\x01\x00\x00#\x00\x00Di\x00\x05\x00\x03\x02h2\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x12\x00\x00\x00\x0b\x00\x02\x01\x00\xfe\r\x00\xba\x00\x00\x01\x00\x01\xdf\x00 \x18v;=I)7\xfeU\xff\x1b\x90\xd7\xe1D\xf2\xc3k\xc3\xe6=\xfa\xc5\xdb&\x00\x9e\xad\xee8\xe8\x18\x00\x90M\x178;\xb7\xa3\x86F\xf8\xc0\xaa@\xb0t2\x0b\x17\xf7(Zl\xef;\xc1\xce\xb1l\xb7\x8fL\xca\xc0y\xf4\xa4\x13\xbdY\xb2[\xe7\x83}\xf1\xd0\xa5\x91<zNL\xbc\xa5\x9f9\xdd;\xec\xc0Z\xd4\xcfD\x98QB\xb8\x03\n\x92\xdd\xd8a\x1b\x15\x1f:(\xce\xe9\xe8\xa1\xf7\xa0~1\x93\xdc\xec\xa3\xfb\x1e\xca\xdb?\t\x842\xb5\xb3n\t\xa2\xf3z\x00\xc6A\xd7=\x9ec\x8b\xe1c\x8bO;n\x92a}9\xe3\xd4T\x89\xc2\xcf\xcf\xee32\xaa\x18\xf9\x18\xc0\x15pC\x04Z\xe3\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x003\x00+\x00)\xca\xca\x00\x01\x00\x00\x1d\x00 \xda4\x15\xc4\xc4m\x1b\xbb\xe1\x8dBb\x01[i\xb8\x06\x8f\xeb\xea\xcc\xf6}\xa3\xfdL\xb8g\x89\xaf\xe3{**\x00\x01\x00\x00\x15\x00"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2024-04-10 00:36:02 -0300] [161359] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\xce0N\xe7\xf8?\x0c$\xba}x@\xce\xd3\xcfhx~\xb8X\xce<\x17\xfa\xbfA%\x0e\xb0\x06B\xc7 \xbf<\xfa\xbd \xf0\x87Bh\xfc8\r\xa3\x7f\xc8q\xc1H\x06-\xc8\xbc\xad\xee\xbe\xca\xafuq\x1d\x9eo\x00 zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\xaa\xaa\x00\x00\xfe\r\x00\xba\x00\x00\x01\x00\x01\xc4\x00 \x88\xbb\xbf\xd7\x14c4\x14O\x08\x08\x86\xcb\xd4\x08\\\x82\x01\x03\xba\x8a]\xc3d\xc9K\xf4}\xbf\x1c\xc1f\x00\x90j\x1e\xdfe#\x14\x08qP\xc1\xe7\xaf\xf4h\xae\xbb\xdb\xa6\x9d58"2.sfGN\xbf:\xe0\xdd\xbb\xca\xb4\xff\x8b\x19\xb7\x8a\xd4jDL\x0e6\xb1z\x9c\x97\x89\x06\xb3L\xb9\x1b\x97 v8\x17\xe4\x17\xbdI\xdf\x19jM\xcb\xb4\xdc\t\xf7.\xc67\xd2&\x86\x8e\xba\x16\xd0\x0bn84\xa2\x97P8d\xfc\xfb\x8b\xb0\x80+\xba\x91\x8e\xef\x99\x1ae\xc7\x9a\xe1\xe0>\xe9`\xcdSM\x04Z\xe5\xe0.K\x9fp`\x08\x04\xe4\x0f\x1cAdH\x81\x97\x16^\x10\xfcO9X\xb1\x9c\x00\n\x00\n\x00\x08\xaa\xaa\x00\x1d\x00\x17\x00\x18\xff\x01\x00\x01\x00\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06zz\x03\x04\x03\x03\x00\x17\x00\x00Di\x00\x05\x00\x03\x02h2\x003\x00+\x00)\xaa\xaa\x00\x01\x00\x00\x1d\x00 \xd8\xfa]/\x98Q\xa6\xf7^b_\xea\x0c\xec\xd5\xc9JO=\xd0\x04\x8bm\xa5o,A\xbc\xe1p\xa0V\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00\r\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0b\x00\x02\x01\x00\xba\xba\x00\x01\x00\x00\x15\x00"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2024-04-10 06:36:21 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161417)
+[2024-04-10 00:36:21 -0300] [161417] [INFO] Worker exiting (pid: 161417)
+[2024-04-10 06:36:21 +0300] [161358] [ERROR] Worker (pid:161417) exited with code 1
+[2024-04-10 06:36:21 +0300] [161358] [ERROR] Worker (pid:161417) exited with code 1.
+[2024-04-10 06:36:21 +0300] [161431] [INFO] Booting worker with pid: 161431
+[2024-04-10 06:36:29 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161418)
+[2024-04-10 00:36:29 -0300] [161418] [INFO] Worker exiting (pid: 161418)
+[2024-04-10 06:36:29 +0300] [161358] [ERROR] Worker (pid:161418) exited with code 1
+[2024-04-10 06:36:29 +0300] [161358] [ERROR] Worker (pid:161418) exited with code 1.
+[2024-04-10 06:36:29 +0300] [161432] [INFO] Booting worker with pid: 161432
+[2024-04-10 06:36:32 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161359)
+[2024-04-10 00:36:32 -0300] [161359] [INFO] Worker exiting (pid: 161359)
+[2024-04-10 06:36:32 +0300] [161358] [ERROR] Worker (pid:161359) exited with code 1
+[2024-04-10 06:36:32 +0300] [161358] [ERROR] Worker (pid:161359) exited with code 1.
+[2024-04-10 06:36:32 +0300] [161433] [INFO] Booting worker with pid: 161433
+[2024-04-10 06:37:00 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161431)
+[2024-04-10 00:37:00 -0300] [161431] [INFO] Worker exiting (pid: 161431)
+[2024-04-10 06:37:00 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161432)
+[2024-04-10 00:37:00 -0300] [161432] [INFO] Worker exiting (pid: 161432)
+[2024-04-10 06:37:00 +0300] [161358] [ERROR] Worker (pid:161431) exited with code 1
+[2024-04-10 06:37:00 +0300] [161358] [ERROR] Worker (pid:161431) exited with code 1.
+[2024-04-10 06:37:00 +0300] [161358] [ERROR] Worker (pid:161432) exited with code 1
+[2024-04-10 06:37:00 +0300] [161358] [ERROR] Worker (pid:161432) exited with code 1.
+[2024-04-10 06:37:00 +0300] [161435] [INFO] Booting worker with pid: 161435
+[2024-04-10 06:37:00 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 06:37:00 +0300] [161436] [INFO] Booting worker with pid: 161436
+[2024-04-10 06:37:00 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 00:37:31 -0300] [161435] [DEBUG] GET /
+[2024-04-10 00:37:39 -0300] [161433] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x00\xfb\x01\x00\x00\xf7\x03\x03\xe7g\x14b\xe9\xe4E\xbc\xca\xed\x7fns\n\x1a\x15\x0e\xc3\xcaTm\x93\x1cb\xf5`:\xd9\xa9\n\x0e\xe2 \x1d\xb4\xecH\xb1\x08\xa6\xfac/\xd2\x8f$\xe5\xa7\xdd\xd6\x12\x8f\xea\xc6\xc7\xa8\x00j\xa5\x8d\xc0\x82\x110l\x00"\x13\x01\x13\x02\x13\x03\xc0+\xc0,\xcc\xa9\xc0/\xc00\xcc\xa8\xc0\t\xc0\n\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x00\x8c\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x00\x10\x00\x0b\x00\t\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x003\x00&\x00$\x00\x1d\x00 \xf1e|\x97\x82\x1dwKK\xb0\xfc7-\x95K\xe4\xbb\xce\xdaJ\xefq\xdd\x99\xda_\x93\xde\xf4\x16\x91O\x00-\x00\x02\x01\x01\x00+\x00\t\x08\x03\x04\x03\x03\x03\x02\x03\x01'
+[2024-04-10 06:38:02 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161435)
+[2024-04-10 00:38:02 -0300] [161435] [INFO] Worker exiting (pid: 161435)
+[2024-04-10 06:38:02 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161436)
+[2024-04-10 00:38:02 -0300] [161436] [INFO] Worker exiting (pid: 161436)
+[2024-04-10 06:38:02 +0300] [161358] [ERROR] Worker (pid:161436) exited with code 1
+[2024-04-10 06:38:02 +0300] [161358] [ERROR] Worker (pid:161436) exited with code 1.
+[2024-04-10 06:38:02 +0300] [161358] [ERROR] Worker (pid:161435) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 06:38:02 +0300] [161438] [INFO] Booting worker with pid: 161438
+[2024-04-10 06:38:02 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 06:38:02 +0300] [161439] [INFO] Booting worker with pid: 161439
+[2024-04-10 06:38:02 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 00:39:08 -0300] [161438] [DEBUG] GET /
+[2024-04-10 00:39:15 -0300] [161439] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x00\xfb\x01\x00\x00\xf7\x03\x03\x12`W\xa2\x06HG\xdb\xe0\x8f=\xc7\x8c\xaa!`\xd0rQ\xd2~f4\x0f\xdf\xf8\x0f\xd40T\x15\xba \xe8\xa2\xc7\xb0=\xf4vFQF\x85\x8f\xfc\x9b\xec\xc4\x18!\xdc7\xc2\x10\xb0\xbah\xe9\x1b\xc6\x15\x1c\x1e#\x00"\x13\x01\x13\x02\x13\x03\xc0+\xc0,\xcc\xa9\xc0/\xc00\xcc\xa8\xc0\t\xc0\n\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x00\x8c\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x00\x10\x00\x0b\x00\t\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x003\x00&\x00$\x00\x1d\x00 h\xe5\xa9\xd3\x8c\x93\x00\xde$]*^\xab;\xd3\xed\xa8 \x0b\xdbJ\'\x18\xb6\xf3\x93\xfa\x9d8YUG\x00-\x00\x02\x01\x01\x00+\x00\t\x08\x03\x04\x03\x03\x03\x02\x03\x01'
+[2024-04-10 06:39:39 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161433)
+[2024-04-10 00:39:39 -0300] [161433] [INFO] Worker exiting (pid: 161433)
+[2024-04-10 06:39:39 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161438)
+[2024-04-10 00:39:39 -0300] [161438] [INFO] Worker exiting (pid: 161438)
+[2024-04-10 06:39:39 +0300] [161358] [ERROR] Worker (pid:161433) exited with code 1
+[2024-04-10 06:39:39 +0300] [161358] [ERROR] Worker (pid:161433) exited with code 1.
+[2024-04-10 06:39:39 +0300] [161358] [ERROR] Worker (pid:161438) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 06:39:39 +0300] [161441] [INFO] Booting worker with pid: 161441
+[2024-04-10 06:39:39 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 06:39:39 +0300] [161442] [INFO] Booting worker with pid: 161442
+[2024-04-10 06:39:39 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 00:40:54 -0300] [161439] [DEBUG] GET /admin/
+[2024-04-10 00:40:54 -0300] [161441] [DEBUG] GET /admin/login/
+[2024-04-10 00:40:54 -0300] [161439] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 00:40:54 -0300] [161441] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 00:40:54 -0300] [161442] [DEBUG] GET /static/admin/css/login.css
+[2024-04-10 00:40:54 -0300] [161439] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 00:40:54 -0300] [161442] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 00:40:55 -0300] [161439] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 00:40:55 -0300] [161442] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 00:40:55 -0300] [161441] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 00:40:55 -0300] [161439] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 00:40:58 -0300] [161442] [DEBUG] POST /admin/login/
+[2024-04-10 00:40:58 -0300] [161441] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 00:40:59 -0300] [161439] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 00:40:59 -0300] [161441] [DEBUG] GET /static/admin/css/login.css
+[2024-04-10 00:40:59 -0300] [161439] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 00:40:59 -0300] [161439] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 00:40:59 -0300] [161441] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 00:40:59 -0300] [161442] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 00:40:59 -0300] [161439] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 00:40:59 -0300] [161441] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 00:41:20 -0300] [161442] [DEBUG] POST /admin/login/
+[2024-04-10 00:41:20 -0300] [161439] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 00:41:21 -0300] [161439] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 00:41:21 -0300] [161441] [DEBUG] GET /static/admin/css/login.css
+[2024-04-10 00:41:21 -0300] [161441] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 00:41:21 -0300] [161441] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 00:41:21 -0300] [161439] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 00:41:21 -0300] [161442] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 00:41:21 -0300] [161441] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 00:41:21 -0300] [161439] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 06:41:52 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161441)
+[2024-04-10 00:41:52 -0300] [161441] [INFO] Worker exiting (pid: 161441)
+[2024-04-10 06:41:52 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161442)
+[2024-04-10 00:41:52 -0300] [161442] [INFO] Worker exiting (pid: 161442)
+[2024-04-10 06:41:53 +0300] [161358] [ERROR] Worker (pid:161441) exited with code 1
+[2024-04-10 06:41:53 +0300] [161358] [ERROR] Worker (pid:161441) exited with code 1.
+[2024-04-10 06:41:53 +0300] [161448] [INFO] Booting worker with pid: 161448
+[2024-04-10 06:41:53 +0300] [161358] [ERROR] Worker (pid:161442) exited with code 1
+[2024-04-10 06:41:53 +0300] [161358] [ERROR] Worker (pid:161442) exited with code 1.
+[2024-04-10 06:41:53 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 06:41:53 +0300] [161449] [INFO] Booting worker with pid: 161449
+[2024-04-10 06:41:53 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 00:41:57 -0300] [161448] [DEBUG] GET /
+[2024-04-10 00:42:04 -0300] [161449] [DEBUG] GET /accounts/logout/
+[2024-04-10 00:42:04 -0300] [161439] [DEBUG] GET /static/usuarios/style.css
+[2024-04-10 00:42:07 -0300] [161448] [DEBUG] GET /accounts/logout/
+[2024-04-10 00:42:07 -0300] [161439] [DEBUG] GET /static/usuarios/style.css
+[2024-04-10 00:42:11 -0300] [161449] [DEBUG] GET /accounts/logout/
+[2024-04-10 00:42:15 -0300] [161439] [DEBUG] GET /login/
+[2024-04-10 00:42:21 -0300] [161448] [DEBUG] GET /accounts/password/reset/
+[2024-04-10 00:42:21 -0300] [161449] [DEBUG] GET /media/logo_fun.png
+[2024-04-10 00:42:28 -0300] [161439] [DEBUG] POST /accounts/password/reset/
+[2024-04-10 00:42:28 -0300] [161448] [DEBUG] GET /accounts/password/reset/done/
+[2024-04-10 00:42:28 -0300] [161449] [DEBUG] GET /static/usuarios/style.css
+[2024-04-10 06:42:59 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161439)
+[2024-04-10 06:42:59 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161448)
+[2024-04-10 00:42:59 -0300] [161439] [INFO] Worker exiting (pid: 161439)
+[2024-04-10 00:42:59 -0300] [161448] [INFO] Worker exiting (pid: 161448)
+[2024-04-10 06:42:59 +0300] [161358] [ERROR] Worker (pid:161439) exited with code 1
+[2024-04-10 06:42:59 +0300] [161358] [ERROR] Worker (pid:161439) exited with code 1.
+[2024-04-10 06:42:59 +0300] [161358] [ERROR] Worker (pid:161448) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 06:42:59 +0300] [161451] [INFO] Booting worker with pid: 161451
+[2024-04-10 06:42:59 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 06:42:59 +0300] [161452] [INFO] Booting worker with pid: 161452
+[2024-04-10 06:42:59 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 00:47:31 -0300] [161451] [DEBUG] GET /
+[2024-04-10 06:48:00 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161452)
+[2024-04-10 00:48:00 -0300] [161452] [INFO] Worker exiting (pid: 161452)
+[2024-04-10 06:48:00 +0300] [161358] [ERROR] Worker (pid:161452) exited with code 1
+[2024-04-10 06:48:00 +0300] [161358] [ERROR] Worker (pid:161452) exited with code 1.
+[2024-04-10 06:48:00 +0300] [161461] [INFO] Booting worker with pid: 161461
+[2024-04-10 06:48:02 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161449)
+[2024-04-10 00:48:02 -0300] [161449] [INFO] Worker exiting (pid: 161449)
+[2024-04-10 06:48:02 +0300] [161358] [ERROR] Worker (pid:161449) exited with code 1
+[2024-04-10 06:48:02 +0300] [161358] [ERROR] Worker (pid:161449) exited with code 1.
+[2024-04-10 06:48:02 +0300] [161462] [INFO] Booting worker with pid: 161462
+[2024-04-10 06:48:06 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161451)
+[2024-04-10 00:48:06 -0300] [161451] [INFO] Worker exiting (pid: 161451)
+[2024-04-10 06:48:06 +0300] [161358] [ERROR] Worker (pid:161451) exited with code 1
+[2024-04-10 06:48:06 +0300] [161358] [ERROR] Worker (pid:161451) exited with code 1.
+[2024-04-10 06:48:06 +0300] [161463] [INFO] Booting worker with pid: 161463
+[2024-04-10 01:25:00 -0300] [161463] [DEBUG] GET /accounts/password/reset/
+[2024-04-10 01:25:29 -0300] [161462] [DEBUG] Closing connection. 
+[2024-04-10 01:25:29 -0300] [161461] [DEBUG] Closing connection. 
+[2024-04-10 01:51:31 -0300] [161463] [DEBUG] GET /
+[2024-04-10 07:52:02 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161461)
+[2024-04-10 01:52:02 -0300] [161461] [INFO] Worker exiting (pid: 161461)
+[2024-04-10 07:52:02 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161462)
+[2024-04-10 01:52:02 -0300] [161462] [INFO] Worker exiting (pid: 161462)
+[2024-04-10 07:52:02 +0300] [161358] [ERROR] Worker (pid:161461) exited with code 1
+[2024-04-10 07:52:02 +0300] [161358] [ERROR] Worker (pid:161461) exited with code 1.
+[2024-04-10 07:52:02 +0300] [161358] [ERROR] Worker (pid:161462) exited with code 1
+[2024-04-10 07:52:02 +0300] [161358] [ERROR] Worker (pid:161462) exited with code 1.
+[2024-04-10 07:52:02 +0300] [161563] [INFO] Booting worker with pid: 161563
+[2024-04-10 07:52:03 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 07:52:03 +0300] [161564] [INFO] Booting worker with pid: 161564
+[2024-04-10 07:52:03 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 05:36:37 -0300] [161564] [DEBUG] GET /
+[2024-04-10 08:04:59 -0300] [161563] [DEBUG] GET /
+[2024-04-10 08:31:55 -0300] [161563] [DEBUG] GET /
+[2024-04-10 08:31:55 -0300] [161563] [DEBUG] GET /
+[2024-04-10 08:31:56 -0300] [161563] [DEBUG] GET /media/receitas.png
+[2024-04-10 08:31:56 -0300] [161563] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 08:31:56 -0300] [161563] [DEBUG] GET /media/eye_.png
+[2024-04-10 08:31:56 -0300] [161563] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 08:31:56 -0300] [161563] [DEBUG] GET /media/eye_.png
+[2024-04-10 08:31:56 -0300] [161563] [DEBUG] GET /media/receitas.png
+[2024-04-10 08:31:57 -0300] [161563] [DEBUG] GET /
+[2024-04-10 08:31:57 -0300] [161563] [DEBUG] GET /media/receitas.png
+[2024-04-10 08:31:57 -0300] [161563] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 08:31:57 -0300] [161563] [DEBUG] GET /media/eye_.png
+[2024-04-10 08:31:58 -0300] [161563] [DEBUG] GET /favicon.ico
+[2024-04-10 14:32:25 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161564)
+[2024-04-10 08:32:25 -0300] [161564] [INFO] Worker exiting (pid: 161564)
+[2024-04-10 14:32:25 +0300] [161358] [ERROR] Worker (pid:161564) exited with code 1
+[2024-04-10 14:32:25 +0300] [161358] [ERROR] Worker (pid:161564) exited with code 1.
+[2024-04-10 14:32:25 +0300] [162475] [INFO] Booting worker with pid: 162475
+[2024-04-10 14:32:26 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161463)
+[2024-04-10 08:32:26 -0300] [161463] [INFO] Worker exiting (pid: 161463)
+[2024-04-10 14:32:26 +0300] [161358] [ERROR] Worker (pid:161463) exited with code 1
+[2024-04-10 14:32:26 +0300] [161358] [ERROR] Worker (pid:161463) exited with code 1.
+[2024-04-10 14:32:26 +0300] [162476] [INFO] Booting worker with pid: 162476
+[2024-04-10 09:51:21 -0300] [161563] [DEBUG] Ignored premature client disconnection. No more data after: b'MGLNDD_34.230.46.128_8000\n'
+[2024-04-10 10:26:36 -0300] [161563] [DEBUG] GET /media/receitas.png
+[2024-04-10 10:26:36 -0300] [162476] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 10:26:36 -0300] [161563] [DEBUG] GET /media/eye_.png
+[2024-04-10 10:26:37 -0300] [161563] [DEBUG] GET /favicon.ico
+[2024-04-10 11:02:14 -0300] [162475] [DEBUG] Ignoring connection reset
+[2024-04-10 11:02:18 -0300] [161563] [DEBUG] GET /
+[2024-04-10 11:02:27 -0300] [162476] [DEBUG] GET /
+[2024-04-10 11:02:29 -0300] [161563] [DEBUG] PRI *
+[2024-04-10 11:02:32 -0300] [162475] [DEBUG] GET /favicon.ico
+[2024-04-10 13:35:37 -0300] [162476] [DEBUG] GET /
+[2024-04-10 13:35:38 -0300] [162475] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 13:35:38 -0300] [161563] [DEBUG] GET /media/receitas.png
+[2024-04-10 13:35:38 -0300] [162476] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 13:35:38 -0300] [161563] [DEBUG] GET /media/eye_.png
+[2024-04-10 13:35:38 -0300] [162476] [DEBUG] GET /favicon.ico
+[2024-04-10 13:35:53 -0300] [162475] [DEBUG] GET /
+[2024-04-10 13:35:53 -0300] [162476] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 19:36:23 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:161563)
+[2024-04-10 13:36:23 -0300] [161563] [INFO] Worker exiting (pid: 161563)
+[2024-04-10 19:36:23 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:162475)
+[2024-04-10 13:36:23 -0300] [162475] [INFO] Worker exiting (pid: 162475)
+[2024-04-10 19:36:23 +0300] [161358] [ERROR] Worker (pid:162475) exited with code 1
+[2024-04-10 19:36:23 +0300] [161358] [ERROR] Worker (pid:162475) exited with code 1.
+[2024-04-10 19:36:23 +0300] [163680] [INFO] Booting worker with pid: 163680
+[2024-04-10 19:36:23 +0300] [161358] [ERROR] Worker (pid:161563) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 19:36:24 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 19:36:24 +0300] [163681] [INFO] Booting worker with pid: 163681
+[2024-04-10 19:36:24 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 13:37:23 -0300] [162476] [DEBUG] GET /
+[2024-04-10 13:37:23 -0300] [163680] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 13:37:37 -0300] [162476] [DEBUG] GET /agendaFinanceira/cadastrar_receita/
+[2024-04-10 13:37:37 -0300] [163681] [DEBUG] GET /accounts/login/
+[2024-04-10 13:37:37 -0300] [162476] [DEBUG] GET /media/logo-fundo.png
+[2024-04-10 19:38:09 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:162476)
+[2024-04-10 13:38:09 -0300] [162476] [INFO] Worker exiting (pid: 162476)
+[2024-04-10 19:38:09 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163680)
+[2024-04-10 13:38:09 -0300] [163680] [INFO] Worker exiting (pid: 163680)
+[2024-04-10 19:38:09 +0300] [161358] [ERROR] Worker (pid:163680) exited with code 1
+[2024-04-10 19:38:09 +0300] [161358] [ERROR] Worker (pid:163680) exited with code 1.
+[2024-04-10 19:38:09 +0300] [161358] [ERROR] Worker (pid:162476) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 19:38:09 +0300] [163700] [INFO] Booting worker with pid: 163700
+[2024-04-10 19:38:09 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 19:38:09 +0300] [163701] [INFO] Booting worker with pid: 163701
+[2024-04-10 19:38:09 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 19:39:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163681)
+[2024-04-10 13:39:08 -0300] [163681] [INFO] Worker exiting (pid: 163681)
+[2024-04-10 19:39:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163700)
+[2024-04-10 13:39:08 -0300] [163700] [INFO] Worker exiting (pid: 163700)
+[2024-04-10 19:39:08 +0300] [161358] [ERROR] Worker (pid:163700) exited with code 1
+[2024-04-10 19:39:08 +0300] [161358] [ERROR] Worker (pid:163700) exited with code 1.
+[2024-04-10 19:39:08 +0300] [161358] [ERROR] Worker (pid:163681) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 19:39:08 +0300] [163703] [INFO] Booting worker with pid: 163703
+[2024-04-10 19:39:08 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 19:39:08 +0300] [163704] [INFO] Booting worker with pid: 163704
+[2024-04-10 19:39:08 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 19:40:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163701)
+[2024-04-10 13:40:08 -0300] [163701] [INFO] Worker exiting (pid: 163701)
+[2024-04-10 19:40:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163703)
+[2024-04-10 13:40:08 -0300] [163703] [INFO] Worker exiting (pid: 163703)
+[2024-04-10 19:40:09 +0300] [161358] [ERROR] Worker (pid:163701) exited with code 1
+[2024-04-10 19:40:09 +0300] [161358] [ERROR] Worker (pid:163701) exited with code 1.
+[2024-04-10 19:40:09 +0300] [161358] [ERROR] Worker (pid:163703) exited with code 1
+[2024-04-10 19:40:09 +0300] [161358] [ERROR] Worker (pid:163703) exited with code 1.
+[2024-04-10 19:40:09 +0300] [163708] [INFO] Booting worker with pid: 163708
+[2024-04-10 19:40:09 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 19:40:09 +0300] [163709] [INFO] Booting worker with pid: 163709
+[2024-04-10 19:40:09 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 19:41:09 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163704)
+[2024-04-10 13:41:09 -0300] [163704] [INFO] Worker exiting (pid: 163704)
+[2024-04-10 19:41:09 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163708)
+[2024-04-10 13:41:09 -0300] [163708] [INFO] Worker exiting (pid: 163708)
+[2024-04-10 19:41:09 +0300] [161358] [ERROR] Worker (pid:163708) exited with code 1
+[2024-04-10 19:41:09 +0300] [161358] [ERROR] Worker (pid:163708) exited with code 1.
+[2024-04-10 19:41:09 +0300] [161358] [ERROR] Worker (pid:163704) exited with code 1
+[2024-04-10 19:41:09 +0300] [161358] [ERROR] Worker (pid:163704) exited with code 1.
+[2024-04-10 19:41:09 +0300] [163711] [INFO] Booting worker with pid: 163711
+[2024-04-10 19:41:09 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 19:41:09 +0300] [163712] [INFO] Booting worker with pid: 163712
+[2024-04-10 19:41:09 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 19:42:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163709)
+[2024-04-10 13:42:08 -0300] [163709] [INFO] Worker exiting (pid: 163709)
+[2024-04-10 19:42:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163711)
+[2024-04-10 13:42:08 -0300] [163711] [INFO] Worker exiting (pid: 163711)
+[2024-04-10 19:42:08 +0300] [161358] [ERROR] Worker (pid:163709) exited with code 1
+[2024-04-10 19:42:08 +0300] [161358] [ERROR] Worker (pid:163709) exited with code 1.
+[2024-04-10 19:42:08 +0300] [161358] [ERROR] Worker (pid:163711) exited with code 1
+[2024-04-10 19:42:08 +0300] [161358] [ERROR] Worker (pid:163711) exited with code 1.
+[2024-04-10 19:42:08 +0300] [163714] [INFO] Booting worker with pid: 163714
+[2024-04-10 19:42:08 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 19:42:08 +0300] [163715] [INFO] Booting worker with pid: 163715
+[2024-04-10 19:42:08 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 13:57:22 -0300] [163712] [DEBUG] GET /accounts/login/
+[2024-04-10 13:57:25 -0300] [163715] [DEBUG] GET /accounts/login/
+[2024-04-10 13:57:27 -0300] [163714] [DEBUG] GET /accounts/login/
+[2024-04-10 13:57:28 -0300] [163712] [DEBUG] GET /accounts/login/
+[2024-04-10 13:57:38 -0300] [163715] [DEBUG] GET /
+[2024-04-10 13:57:39 -0300] [163714] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 13:57:43 -0300] [163712] [DEBUG] GET /login/
+[2024-04-10 13:57:55 -0300] [163714] [DEBUG] GET /login/
+[2024-04-10 13:57:59 -0300] [163715] [DEBUG] GET /login/
+[2024-04-10 19:58:25 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163712)
+[2024-04-10 13:58:25 -0300] [163712] [INFO] Worker exiting (pid: 163712)
+[2024-04-10 19:58:25 +0300] [161358] [ERROR] Worker (pid:163712) exited with code 1
+[2024-04-10 19:58:25 +0300] [161358] [ERROR] Worker (pid:163712) exited with code 1.
+[2024-04-10 19:58:25 +0300] [163863] [INFO] Booting worker with pid: 163863
+[2024-04-10 19:58:31 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163714)
+[2024-04-10 13:58:31 -0300] [163714] [INFO] Worker exiting (pid: 163714)
+[2024-04-10 19:58:31 +0300] [161358] [ERROR] Worker (pid:163714) exited with code 1
+[2024-04-10 19:58:31 +0300] [161358] [ERROR] Worker (pid:163714) exited with code 1.
+[2024-04-10 19:58:31 +0300] [163864] [INFO] Booting worker with pid: 163864
+[2024-04-10 13:58:31 -0300] [163715] [DEBUG] GET /login/
+[2024-04-10 13:58:39 -0300] [163864] [DEBUG] GET /usuarios/create_user/
+[2024-04-10 13:58:40 -0300] [163863] [DEBUG] GET /static/usuarios/style.css
+[2024-04-10 13:58:43 -0300] [163715] [DEBUG] GET /login/
+[2024-04-10 19:59:11 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163864)
+[2024-04-10 13:59:11 -0300] [163864] [INFO] Worker exiting (pid: 163864)
+[2024-04-10 19:59:11 +0300] [161358] [ERROR] Worker (pid:163864) exited with code 1
+[2024-04-10 19:59:11 +0300] [161358] [ERROR] Worker (pid:163864) exited with code 1.
+[2024-04-10 19:59:11 +0300] [163865] [INFO] Booting worker with pid: 163865
+[2024-04-10 19:59:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163863)
+[2024-04-10 13:59:14 -0300] [163863] [INFO] Worker exiting (pid: 163863)
+[2024-04-10 19:59:14 +0300] [161358] [ERROR] Worker (pid:163863) exited with code 1
+[2024-04-10 19:59:14 +0300] [161358] [ERROR] Worker (pid:163863) exited with code 1.
+[2024-04-10 19:59:14 +0300] [163866] [INFO] Booting worker with pid: 163866
+[2024-04-10 14:00:06 -0300] [163866] [DEBUG] GET /
+[2024-04-10 14:00:06 -0300] [163866] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 14:00:06 -0300] [163866] [DEBUG] GET /media/receitas.png
+[2024-04-10 14:00:06 -0300] [163866] [DEBUG] GET /media/cad_despesas.png
+[2024-04-10 14:00:06 -0300] [163866] [DEBUG] GET /media/eye_.png
+[2024-04-10 14:00:07 -0300] [163866] [DEBUG] GET /favicon.ico
+[2024-04-10 14:00:10 -0300] [163866] [DEBUG] GET /admin/
+[2024-04-10 14:00:10 -0300] [163866] [DEBUG] GET /admin/login/
+[2024-04-10 14:00:10 -0300] [163866] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:00:10 -0300] [163866] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:00:10 -0300] [163866] [DEBUG] GET /static/admin/css/login.css
+[2024-04-10 14:00:10 -0300] [163866] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:00:10 -0300] [163866] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:00:11 -0300] [163866] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:00:11 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:00:11 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 20:00:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163715)
+[2024-04-10 20:00:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163865)
+[2024-04-10 14:00:14 -0300] [163715] [INFO] Worker exiting (pid: 163715)
+[2024-04-10 14:00:14 -0300] [163865] [INFO] Worker exiting (pid: 163865)
+[2024-04-10 20:00:14 +0300] [161358] [ERROR] Worker (pid:163865) exited with code 1
+[2024-04-10 20:00:14 +0300] [161358] [ERROR] Worker (pid:163865) exited with code 1.
+[2024-04-10 20:00:14 +0300] [163870] [INFO] Booting worker with pid: 163870
+[2024-04-10 20:00:14 +0300] [161358] [ERROR] Worker (pid:163715) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 20:00:14 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 20:00:14 +0300] [163871] [INFO] Booting worker with pid: 163871
+[2024-04-10 20:00:14 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 14:00:18 -0300] [163870] [DEBUG] POST /admin/login/
+[2024-04-10 14:00:18 -0300] [163871] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:00:19 -0300] [163866] [DEBUG] GET /static/admin/css/login.css
+[2024-04-10 14:00:19 -0300] [163866] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:00:19 -0300] [163870] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:00:19 -0300] [163866] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:00:19 -0300] [163871] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:00:19 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:00:19 -0300] [163871] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:00:19 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] POST /admin/login/
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] Closing connection. 
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] GET /admin/
+[2024-04-10 20:01:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163870)
+[2024-04-10 20:01:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163871)
+[2024-04-10 14:01:14 -0300] [163870] [INFO] Worker exiting (pid: 163870)
+[2024-04-10 14:01:14 -0300] [163871] [INFO] Worker exiting (pid: 163871)
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] GET /static/admin/css/dashboard.css
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:01:14 -0300] [163866] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 20:01:15 +0300] [161358] [ERROR] Worker (pid:163871) exited with code 1
+[2024-04-10 20:01:15 +0300] [161358] [ERROR] Worker (pid:163871) exited with code 1.
+[2024-04-10 20:01:15 +0300] [161358] [ERROR] Worker (pid:163870) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 20:01:15 +0300] [163873] [INFO] Booting worker with pid: 163873
+[2024-04-10 20:01:15 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 20:01:15 +0300] [163874] [INFO] Booting worker with pid: 163874
+[2024-04-10 20:01:15 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 14:01:15 -0300] [163866] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:01:15 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:01:15 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:01:15 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:01:15 -0300] [163866] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 14:01:15 -0300] [163866] [DEBUG] GET /static/admin/img/icon-changelink.svg
+[2024-04-10 14:01:21 -0300] [163873] [DEBUG] GET /admin/usuarios/user/
+[2024-04-10 14:01:21 -0300] [163874] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:01:22 -0300] [163873] [DEBUG] GET /static/admin/css/changelists.css
+[2024-04-10 14:01:22 -0300] [163866] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:01:22 -0300] [163866] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:01:22 -0300] [163866] [DEBUG] GET /admin/jsi18n/
+[2024-04-10 14:01:22 -0300] [163873] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:01:22 -0300] [163874] [DEBUG] GET /static/admin/js/vendor/jquery/jquery.js
+[2024-04-10 14:01:22 -0300] [163866] [DEBUG] GET /static/admin/js/jquery.init.js
+[2024-04-10 14:01:22 -0300] [163873] [DEBUG] GET /static/admin/js/core.js
+[2024-04-10 14:01:22 -0300] [163873] [DEBUG] GET /static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-10 14:01:22 -0300] [163873] [DEBUG] GET /static/admin/js/actions.js
+[2024-04-10 14:01:22 -0300] [163866] [DEBUG] GET /static/admin/js/urlify.js
+[2024-04-10 14:01:22 -0300] [163874] [DEBUG] GET /static/admin/js/prepopulate.js
+[2024-04-10 14:01:22 -0300] [163873] [DEBUG] GET /static/admin/js/vendor/xregexp/xregexp.js
+[2024-04-10 14:01:22 -0300] [163874] [DEBUG] GET /static/admin/img/search.svg
+[2024-04-10 14:01:22 -0300] [163866] [DEBUG] GET /static/admin/img/icon-no.svg
+[2024-04-10 14:01:23 -0300] [163874] [DEBUG] GET /static/admin/img/icon-yes.svg
+[2024-04-10 14:01:23 -0300] [163873] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:01:23 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:01:23 -0300] [163873] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:01:23 -0300] [163874] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 14:01:23 -0300] [163874] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:01:23 -0300] [163866] [DEBUG] GET /static/admin/img/tooltag-add.svg
+[2024-04-10 14:01:23 -0300] [163873] [DEBUG] GET /static/admin/img/sorting-icons.svg
+[2024-04-10 14:01:26 -0300] [163866] [DEBUG] GET /admin/usuarios/user/1/change/
+[2024-04-10 14:01:26 -0300] [163873] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:01:26 -0300] [163874] [DEBUG] GET /static/admin/css/forms.css
+[2024-04-10 14:01:26 -0300] [163873] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:01:26 -0300] [163874] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:01:26 -0300] [163866] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:01:26 -0300] [163873] [DEBUG] GET /static/admin/js/calendar.js
+[2024-04-10 14:01:27 -0300] [163874] [DEBUG] GET /static/admin/css/widgets.css
+[2024-04-10 14:01:27 -0300] [163866] [DEBUG] GET /static/admin/js/admin/DateTimeShortcuts.js
+[2024-04-10 14:01:27 -0300] [163873] [DEBUG] GET /static/admin/js/SelectBox.js
+[2024-04-10 14:01:27 -0300] [163874] [DEBUG] GET /static/admin/js/SelectFilter2.js
+[2024-04-10 14:01:27 -0300] [163866] [DEBUG] GET /admin/jsi18n/
+[2024-04-10 14:01:27 -0300] [163874] [DEBUG] GET /static/admin/js/vendor/jquery/jquery.js
+[2024-04-10 14:01:27 -0300] [163873] [DEBUG] GET /static/admin/js/jquery.init.js
+[2024-04-10 14:01:27 -0300] [163874] [DEBUG] GET /static/admin/js/core.js
+[2024-04-10 14:01:27 -0300] [163873] [DEBUG] GET /static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-10 14:01:27 -0300] [163866] [DEBUG] GET /static/admin/js/actions.js
+[2024-04-10 14:01:27 -0300] [163873] [DEBUG] GET /static/admin/js/urlify.js
+[2024-04-10 14:01:27 -0300] [163874] [DEBUG] GET /static/admin/js/prepopulate.js
+[2024-04-10 14:01:27 -0300] [163874] [DEBUG] GET /static/admin/js/vendor/xregexp/xregexp.js
+[2024-04-10 14:01:27 -0300] [163866] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 14:01:27 -0300] [163873] [DEBUG] GET /static/admin/js/prepopulate_init.js
+[2024-04-10 14:01:27 -0300] [163874] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:01:27 -0300] [163873] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:01:27 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:01:27 -0300] [163873] [DEBUG] GET /static/admin/js/change_form.js
+[2024-04-10 14:01:28 -0300] [163874] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:01:28 -0300] [163866] [DEBUG] GET /static/admin/img/icon-unknown.svg
+[2024-04-10 14:01:28 -0300] [163874] [DEBUG] GET /static/admin/img/selector-icons.svg
+[2024-04-10 14:01:28 -0300] [163873] [DEBUG] GET /static/admin/img/search.svg
+[2024-04-10 14:01:28 -0300] [163873] [DEBUG] GET /static/admin/img/icon-calendar.svg
+[2024-04-10 14:01:28 -0300] [163866] [DEBUG] GET /static/admin/img/icon-unknown-alt.svg
+[2024-04-10 14:01:28 -0300] [163874] [DEBUG] GET /static/admin/img/icon-clock.svg
+[2024-04-10 14:01:44 -0300] [163866] [DEBUG] Closing connection. 
+[2024-04-10 14:01:50 -0300] [163866] [DEBUG] POST /admin/usuarios/user/1/change/
+[2024-04-10 14:01:50 -0300] [163866] [DEBUG] POST /admin/usuarios/user/1/change/
+[2024-04-10 14:01:50 -0300] [163866] [DEBUG] GET /admin/usuarios/user/
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/css/changelists.css
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /admin/jsi18n/
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/vendor/jquery/jquery.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/core.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/jquery.init.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/actions.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/urlify.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/prepopulate.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/js/vendor/xregexp/xregexp.js
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/img/search.svg
+[2024-04-10 14:01:51 -0300] [163866] [DEBUG] GET /static/admin/img/icon-yes.svg
+[2024-04-10 14:01:52 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:01:52 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:01:52 -0300] [163866] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 14:01:52 -0300] [163866] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:01:52 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:01:52 -0300] [163866] [DEBUG] GET /static/admin/img/tooltag-add.svg
+[2024-04-10 14:01:52 -0300] [163866] [DEBUG] GET /static/admin/img/sorting-icons.svg
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /admin/usuarios/user/add/
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/css/forms.css
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /admin/jsi18n/
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/js/vendor/jquery/jquery.js
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/css/widgets.css
+[2024-04-10 14:01:58 -0300] [163866] [DEBUG] GET /static/admin/js/core.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/jquery.init.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/actions.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/urlify.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/vendor/xregexp/xregexp.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/prepopulate_init.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/prepopulate.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/js/change_form.js
+[2024-04-10 14:01:59 -0300] [163866] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 20:02:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163873)
+[2024-04-10 14:02:14 -0300] [163873] [INFO] Worker exiting (pid: 163873)
+[2024-04-10 20:02:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163874)
+[2024-04-10 14:02:14 -0300] [163874] [INFO] Worker exiting (pid: 163874)
+[2024-04-10 20:02:14 +0300] [161358] [ERROR] Worker (pid:163874) exited with code 1
+[2024-04-10 20:02:14 +0300] [161358] [ERROR] Worker (pid:163874) exited with code 1.
+[2024-04-10 20:02:14 +0300] [163876] [INFO] Booting worker with pid: 163876
+[2024-04-10 20:02:14 +0300] [161358] [ERROR] Worker (pid:163873) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 20:02:14 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 20:02:14 +0300] [163877] [INFO] Booting worker with pid: 163877
+[2024-04-10 20:02:14 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 14:02:47 -0300] [163877] [DEBUG] POST /admin/usuarios/user/add/
+[2024-04-10 14:02:47 -0300] [163877] [DEBUG] GET /admin/usuarios/user/3/change/
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/css/forms.css
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /admin/jsi18n/
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/vendor/jquery/jquery.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/calendar.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/css/widgets.css
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/jquery.init.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/admin/DateTimeShortcuts.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/core.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/SelectBox.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/actions.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/urlify.js
+[2024-04-10 14:02:48 -0300] [163877] [DEBUG] GET /static/admin/js/SelectFilter2.js
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/js/prepopulate.js
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/js/prepopulate_init.js
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/js/vendor/xregexp/xregexp.js
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/js/change_form.js
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/icon-yes.svg
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/icon-unknown.svg
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/icon-unknown-alt.svg
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/search.svg
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/selector-icons.svg
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/icon-calendar.svg
+[2024-04-10 14:02:49 -0300] [163877] [DEBUG] GET /static/admin/img/icon-clock.svg
+[2024-04-10 14:03:09 -0300] [163877] [DEBUG] Closing connection. 
+[2024-04-10 14:03:12 -0300] [163877] [DEBUG] POST /admin/usuarios/user/3/change/
+[2024-04-10 14:03:12 -0300] [163877] [DEBUG] GET /admin/usuarios/user/
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/css/changelists.css
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /admin/jsi18n/
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/vendor/jquery/jquery.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/core.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/jquery.init.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/actions.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/urlify.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/vendor/xregexp/xregexp.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/img/search.svg
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/js/prepopulate.js
+[2024-04-10 14:03:13 -0300] [163877] [DEBUG] GET /static/admin/img/icon-yes.svg
+[2024-04-10 14:03:14 -0300] [163877] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 14:03:14 -0300] [163877] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 14:03:14 -0300] [163877] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 14:03:14 -0300] [163877] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 14:03:14 -0300] [163877] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 14:03:14 -0300] [163877] [DEBUG] GET /static/admin/img/tooltag-add.svg
+[2024-04-10 14:03:14 -0300] [163877] [DEBUG] GET /static/admin/img/sorting-icons.svg
+[2024-04-10 20:03:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163866)
+[2024-04-10 20:03:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163876)
+[2024-04-10 14:03:14 -0300] [163876] [INFO] Worker exiting (pid: 163876)
+[2024-04-10 14:03:14 -0300] [163866] [INFO] Worker exiting (pid: 163866)
+[2024-04-10 20:03:14 +0300] [161358] [ERROR] Worker (pid:163876) exited with code 1
+[2024-04-10 20:03:14 +0300] [161358] [ERROR] Worker (pid:163876) exited with code 1.
+[2024-04-10 20:03:14 +0300] [163879] [INFO] Booting worker with pid: 163879
+[2024-04-10 20:03:14 +0300] [161358] [ERROR] Worker (pid:163866) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 20:03:14 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 20:03:14 +0300] [163880] [INFO] Booting worker with pid: 163880
+[2024-04-10 20:03:14 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 14:03:35 -0300] [163879] [DEBUG] POST /login/
+[2024-04-10 14:03:36 -0300] [163880] [DEBUG] GET /
+[2024-04-10 14:03:36 -0300] [163879] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 20:04:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163877)
+[2024-04-10 14:04:08 -0300] [163877] [INFO] Worker exiting (pid: 163877)
+[2024-04-10 20:04:08 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163880)
+[2024-04-10 14:04:08 -0300] [163880] [INFO] Worker exiting (pid: 163880)
+[2024-04-10 20:04:08 +0300] [161358] [ERROR] Worker (pid:163880) exited with code 1
+[2024-04-10 20:04:08 +0300] [161358] [ERROR] Worker (pid:163880) exited with code 1.
+[2024-04-10 20:04:08 +0300] [161358] [ERROR] Worker (pid:163877) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 20:04:08 +0300] [163882] [INFO] Booting worker with pid: 163882
+[2024-04-10 20:04:08 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 20:04:08 +0300] [163883] [INFO] Booting worker with pid: 163883
+[2024-04-10 20:04:08 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 14:04:54 -0300] [163879] [DEBUG] GET /
+[2024-04-10 14:04:54 -0300] [163883] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 15:00:41 -0300] [163883] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 15:00:41 -0300] [163879] [DEBUG] GET /favicon.ico
+[2024-04-10 15:00:43 -0300] [163882] [DEBUG] GET /
+[2024-04-10 21:01:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163879)
+[2024-04-10 15:01:14 -0300] [163879] [INFO] Worker exiting (pid: 163879)
+[2024-04-10 21:01:14 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163883)
+[2024-04-10 15:01:14 -0300] [163883] [INFO] Worker exiting (pid: 163883)
+[2024-04-10 21:01:14 +0300] [161358] [ERROR] Worker (pid:163883) exited with code 1
+[2024-04-10 21:01:14 +0300] [161358] [ERROR] Worker (pid:163883) exited with code 1.
+[2024-04-10 21:01:14 +0300] [164093] [INFO] Booting worker with pid: 164093
+[2024-04-10 21:01:14 +0300] [161358] [ERROR] Worker (pid:163879) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 21:01:14 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 21:01:14 +0300] [164094] [INFO] Booting worker with pid: 164094
+[2024-04-10 21:01:14 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 15:01:14 -0300] [163882] [DEBUG] GET /agendaFinanceira/cadastrar_receita/
+[2024-04-10 15:01:15 -0300] [163882] [DEBUG] GET /static/css/agendaFinanceira.css
+[2024-04-10 15:01:21 -0300] [164093] [DEBUG] GET /agendaFinanceira/cliente-autocomplete/
+[2024-04-10 15:01:25 -0300] [163882] [DEBUG] GET /agendaFinanceira/cliente-autocomplete/
+[2024-04-10 15:01:29 -0300] [164094] [DEBUG] GET /agendaFinanceira/cadastrar_cliente/
+[2024-04-10 15:01:29 -0300] [163882] [DEBUG] GET /static/css/agendaFinanceira.css
+[2024-04-10 15:02:02 -0300] [164094] [DEBUG] POST /agendaFinanceira/cadastrar_cliente/
+[2024-04-10 15:02:02 -0300] [164093] [DEBUG] GET /
+[2024-04-10 15:02:06 -0300] [164094] [DEBUG] GET /agendaFinanceira/cadastrar_receita/
+[2024-04-10 15:02:06 -0300] [163882] [DEBUG] GET /static/css/agendaFinanceira.css
+[2024-04-10 15:02:10 -0300] [164093] [DEBUG] GET /agendaFinanceira/cliente-autocomplete/
+[2024-04-10 21:02:37 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:164094)
+[2024-04-10 15:02:37 -0300] [164094] [INFO] Worker exiting (pid: 164094)
+[2024-04-10 21:02:37 +0300] [161358] [ERROR] Worker (pid:164094) exited with code 1
+[2024-04-10 21:02:37 +0300] [161358] [ERROR] Worker (pid:164094) exited with code 1.
+[2024-04-10 21:02:37 +0300] [164097] [INFO] Booting worker with pid: 164097
+[2024-04-10 15:02:55 -0300] [164093] [DEBUG] POST /agendaFinanceira/cadastrar_receita/
+[2024-04-10 15:02:55 -0300] [163882] [DEBUG] GET /
+[2024-04-10 15:02:58 -0300] [164097] [DEBUG] GET /agendaFinanceira/receitas_list/
+[2024-04-10 15:02:58 -0300] [163882] [DEBUG] GET /static/css/agendaFinanceira.css
+[2024-04-10 15:03:24 -0300] [164097] [DEBUG] POST /agendaFinanceira/excluir_receita/1/
+[2024-04-10 15:03:24 -0300] [164093] [DEBUG] GET /
+[2024-04-10 15:03:26 -0300] [163882] [DEBUG] GET /agendaFinanceira/receitas_list/
+[2024-04-10 15:03:27 -0300] [164093] [DEBUG] GET /static/css/agendaFinanceira.css
+[2024-04-10 15:03:30 -0300] [163882] [DEBUG] GET /
+[2024-04-10 15:03:38 -0300] [164093] [DEBUG] Closing connection. 
+[2024-04-10 15:03:38 -0300] [164097] [DEBUG] Closing connection. 
+[2024-04-10 15:08:00 -0300] [164093] [DEBUG] GET /
+[2024-04-10 15:08:01 -0300] [164097] [DEBUG] GET /favicon.ico
+[2024-04-10 15:08:04 -0300] [163882] [DEBUG] GET /agendaFinanceira/cadastrar_despesa/
+[2024-04-10 15:08:04 -0300] [164097] [DEBUG] GET /static/css/agendaFinanceira.css
+[2024-04-10 21:08:35 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:163882)
+[2024-04-10 15:08:35 -0300] [163882] [INFO] Worker exiting (pid: 163882)
+[2024-04-10 21:08:35 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:164093)
+[2024-04-10 15:08:35 -0300] [164093] [INFO] Worker exiting (pid: 164093)
+[2024-04-10 21:08:35 +0300] [161358] [ERROR] Worker (pid:164093) exited with code 1
+[2024-04-10 21:08:35 +0300] [161358] [ERROR] Worker (pid:164093) exited with code 1.
+[2024-04-10 21:08:35 +0300] [161358] [ERROR] Worker (pid:163882) exited with code 1
+[2024-04-10 21:08:35 +0300] [161358] [ERROR] Worker (pid:163882) exited with code 1.
+[2024-04-10 21:08:35 +0300] [164110] [INFO] Booting worker with pid: 164110
+[2024-04-10 21:08:35 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 21:08:35 +0300] [164111] [INFO] Booting worker with pid: 164111
+[2024-04-10 21:08:35 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 15:09:12 -0300] [164097] [DEBUG] GET /
+[2024-04-10 15:09:12 -0300] [164110] [DEBUG] GET /media/logo-svg.png
+[2024-04-10 15:09:23 -0300] [164097] [DEBUG] GET /admin/
+[2024-04-10 15:09:23 -0300] [164111] [DEBUG] GET /static/admin/css/dashboard.css
+[2024-04-10 15:09:23 -0300] [164110] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 15:09:23 -0300] [164110] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 15:09:23 -0300] [164097] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 15:09:23 -0300] [164111] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 15:09:24 -0300] [164097] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 15:09:24 -0300] [164110] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 15:09:24 -0300] [164111] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 15:09:24 -0300] [164111] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 15:09:24 -0300] [164097] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 15:09:24 -0300] [164110] [DEBUG] GET /static/admin/img/icon-changelink.svg
+[2024-04-10 21:09:55 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:164097)
+[2024-04-10 15:09:55 -0300] [164097] [INFO] Worker exiting (pid: 164097)
+[2024-04-10 21:09:55 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:164111)
+[2024-04-10 15:09:55 -0300] [164111] [INFO] Worker exiting (pid: 164111)
+[2024-04-10 21:09:55 +0300] [161358] [ERROR] Worker (pid:164111) exited with code 1
+[2024-04-10 21:09:55 +0300] [161358] [ERROR] Worker (pid:164111) exited with code 1.
+[2024-04-10 21:09:55 +0300] [161358] [ERROR] Worker (pid:164097) was sent SIGKILL! Perhaps out of memory?
+[2024-04-10 21:09:55 +0300] [164113] [INFO] Booting worker with pid: 164113
+[2024-04-10 21:09:56 +0300] [161358] [DEBUG] 2 workers
+[2024-04-10 21:09:56 +0300] [164114] [INFO] Booting worker with pid: 164114
+[2024-04-10 21:09:56 +0300] [161358] [DEBUG] 3 workers
+[2024-04-10 15:24:34 -0300] [164114] [DEBUG] GET /admin/
+[2024-04-10 15:24:34 -0300] [164113] [DEBUG] GET /static/admin/css/base.css
+[2024-04-10 15:24:35 -0300] [164110] [DEBUG] GET /static/admin/css/nav_sidebar.css
+[2024-04-10 15:24:35 -0300] [164114] [DEBUG] GET /static/admin/css/responsive.css
+[2024-04-10 15:24:35 -0300] [164113] [DEBUG] GET /static/admin/css/dashboard.css
+[2024-04-10 15:24:35 -0300] [164110] [DEBUG] GET /static/admin/css/fonts.css
+[2024-04-10 15:24:35 -0300] [164110] [DEBUG] GET /static/admin/js/nav_sidebar.js
+[2024-04-10 15:24:35 -0300] [164113] [DEBUG] GET /static/admin/fonts/Roboto-Bold-webfont.woff
+[2024-04-10 15:24:35 -0300] [164110] [DEBUG] GET /static/admin/fonts/Roboto-Light-webfont.woff
+[2024-04-10 15:24:35 -0300] [164114] [DEBUG] GET /static/admin/fonts/Roboto-Regular-webfont.woff
+[2024-04-10 15:24:35 -0300] [164110] [DEBUG] GET /static/admin/img/icon-addlink.svg
+[2024-04-10 15:24:35 -0300] [164113] [DEBUG] GET /static/admin/img/icon-changelink.svg
+[2024-04-10 15:24:35 -0300] [164113] [DEBUG] GET /favicon.ico
+[2024-04-10 21:25:06 +0300] [161358] [CRITICAL] WORKER TIMEOUT (pid:164110)
+[2024-04-10 15:25:06 -0300] [164110] [INFO] Worker exiting (pid: 164110)
+[2024-04-10 21:25:06 +0300] [161358] [ERROR] Worker (pid:164110) exited with code 1
+[2024-04-10 21:25:06 +0300] [161358] [ERROR] Worker (pid:164110) exited with code 1.
+[2024-04-10 21:25:06 +0300] [164143] [INFO] Booting worker with pid: 164143
