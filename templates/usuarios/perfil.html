@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <thead>
+    <title>Plano Real</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+    .w3-bar-block .w3-bar-item {padding:20px}
+        * {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+img {
+  width: 100%;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+
+
+.card {
+  width: 420px;
+  background: #f2f2f2;
+  overflow: hidden;
+  font-family: sans-serif;
+  box-shadow: 0 0 40px #00000070;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  margin: 5rem auto;
+  transition: transform 0.3s;
+}
+
+.card2 {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_image2 {
+  background-color: #1FA9FF;
+  border-radius: 5px;
+  box-shadow: 9px 7px 15px 1px rgba(50, 50, 50, 0.30);
+  padding: 30px;
+  margin: 20px;
+  width: 220px;
+  transition: all 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem) scale(1.03);
+}
+
+.top-section {
+  position: relative;
+}
+
+.name {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: black;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.name span {
+  background: #333;
+  padding: 0 5px;
+}
+
+.name span:last-of-type {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.info-section {
+  padding: 0 40px 40px;
+  color: black;
+  opacity: 0.8;
+}
+
+h2 {
+  padding: 1rem 0 1rem;
+}
+
+h2:after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 40px;
+  background: #fff;
+}
+
+p {
+  text-align: justify;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social a {
+  font-size: 12px;
+  color: linear-gradient(135deg, #ff57b9 0%, #a704fd 100%);
+  transition: all 0.4s;
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+  </thead>
+<tbody>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="{% url 'login' %}" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+  <a href="{% url 'admin:index' %}" onclick="w3_close()" class="w3-bar-item w3-button">Adminstrador</a>
+  <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button">Principal</a>
+  <a href="{% url 'auth_logout' %}" onclick="w3_close()" class="w3-bar-item w3-button">Sair</a>
+
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+  </div>
+</div>
+
+<div class="card2">
+    <div class="card_image2"><img src="media/logo_azul.png" alt="Plano Real"></div>
+  </div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-1'>
+      <div class="container">
+  <div class="card">
+  <div class="top-section">
+    <img src="/media/{{ user.userprofile.foto_perfil }}?auto=compress&cs=tinysrgb&dpr=2&h=440&w=440" alt=""/>
+  <div class="name">
+    <span>{{ user.get_full_name }}</span>
+    <br />
+    <span>{{ user.get_username }}</span>
+    <br />
+    <span>{{ user.userprofile.cidade }}</span>
+    </div>
+  </div>
+  <div class="info-section">
+    <h2>Meu Perfil
+  <div></div>
+    </h2>
+  <p>{{ user.userprofile.observacoes }}</p>
+    <h3>Contato
+  <div></div>
+     <span>{{ user.userprofile.nrTelCelular }}</span>
+    </h3>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+  <!-- Footer -->
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</tbody>
+</html>

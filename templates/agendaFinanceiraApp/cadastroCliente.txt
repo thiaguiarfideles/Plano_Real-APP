@@ -1,0 +1,29 @@
+{% extends 'agendaFinanceiraApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiBrownie Admin</title>
+    <!-- Adicione os links para os arquivos CSS do Bootstrap aqui -->
+</head>
+<body>
+
+    <div class="row">
+        <div class="input-group flex-nowrap">
+            <div class="form-control">
+    <h2></h2>
+    <form method="post">
+        {% csrf_token %}
+        {% crispy form %}
+        
+    </form>
+</div>
+{% endblock %}
+
+    <!-- Adicione os links para os arquivos JavaScript do Bootstrap aqui (opcional) -->
+</body>
+</html>

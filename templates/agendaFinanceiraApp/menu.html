@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Agenda Financeira</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+</head>
+<body>
+	<div class="container">
+		<header class="row">
+			<div class="col-md-12">
+			<nav class="navbar navbar-default">
+        		<div class="navbar-header">
+            		<a class="navbar-brand" href="{% url 'menu' %}">Agenda Financeira</a> 
+            	</div>
+				<p class="navbar-text navbar-left"><a href="{% url 'sair' %}">Sair</a></p>			
+			</nav>
+			</div>
+		</header>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h1>Bem vindo {{ request.user.username }}</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="list-group">
+					<p class="list-group-item active">Receitas</p>
+					<a href="{% url 'cadastrarReceita' %}" class="list-group-item">Cadastrar Receita</a>
+					<a href="{% url 'receitas_list' %}" class="list-group-item">Consultar Receita </a>
+
+					<p class="list-group-item active">Despesas</p>
+					<a href="{% url 'cadastrarDespesa' %}" class="list-group-item">Cadastrar Despesas</a>
+					<a href="{% url 'consultaDespesa' %}" class="list-group-item">Consultar Despesas</a>
+
+					<p class="list-group-item active">Saldo</p>
+					<a href="{% url 'saldo' %}" class="list-group-item">Saldo</a>
+				</div>
+			</div>
+		</div>
+
+		<footer class="row">
+			<div class="col-md-12">
+			 
+			</div>	
+		</footer>
+	</div>
+</body>
+</html>

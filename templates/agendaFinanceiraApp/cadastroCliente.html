@@ -1,0 +1,50 @@
+{% extends 'agendaFinanceiraApp/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-7 col-sm-7">
+        <h1 class="text-center">Cadastro de Cliente</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="input-group input-group-lg">
+        <div class="form-control">
+        <form method="post" class="cadastro-form">{% csrf_token %}
+            <div class="form-group">   
+                <label for="id_nm_cliente" class="form-label">Nome do Cliente:</label>
+                {{ form.nm_cliente }}
+            </div>
+            <div class="form-group">   
+                <label for="id_telefone" class="form-label">PIX/Telefone:</label>
+                {{ form.telefone }}
+            </div>
+            <div class="form-group">   
+                <label for="id_endereco" class="form-label">Endereço:</label>
+                {{ form.endereco }}
+            </div>
+            <div class="form-group">   
+                <label for="id_cidade" class="form-label">Cidade:</label>
+                {{ form.cidade }}
+            </div>
+            <div class="form-group">   
+                <label for="id_uf" class="form-label">UF:</label>
+                {{ form.uf }}
+            </div>
+            <div class="form-group">   
+                <label for="id_email" class="form-label">PIX/E-mail:</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">   
+                <label for="id_tipo" class="form-label">Tipo:</label>
+                {{ form.tipo }}
+            </div>
+            <div class="form-group">   
+                <label for="id_cnpj_cpf" class="form-label">PIX/CPF:</label>
+                {{ form.cnpj_cpf }}
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock content %}
