@@ -1461,3 +1461,5 @@ ModuleNotFoundError: No module named 'Plano_Real-APP'
 [2024-04-10 21:25:06 +0300] [161358] [ERROR] Worker (pid:164110) exited with code 1
 [2024-04-10 21:25:06 +0300] [161358] [ERROR] Worker (pid:164110) exited with code 1.
 [2024-04-10 21:25:06 +0300] [164143] [INFO] Booting worker with pid: 164143
+[2024-04-10 18:36:43 -0300] [164143] [DEBUG] GET /
+[2024-04-10 19:19:42 -0300] [164113] [DEBUG] GET /
