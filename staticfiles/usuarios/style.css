@@ -19,3 +19,32 @@
 .dropdown-menu li:hover .sub-menu {
   visibility: visible;
 }
+
+#clientes {
+    width: 100%;
+    height: auto;
+}
+
+.clientes-logo {
+    width: 250px;
+    height: 200px;
+    background-color: white; 
+    display:inline-block;
+    background: #ccc;
+    position: relative;
+}
+
+.clientes-logo img {
+    position: absolute;
+    top: 50%; 
+    left: 80%;
+    transform: translate(-50%, -50%);  
+}
+
+.center
+    {
+        display:         flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+    }

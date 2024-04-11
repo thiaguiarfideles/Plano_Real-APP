@@ -17,7 +17,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import authentication_classes, permission_classes
 from agendaFinanceira.models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual,Cliente
 from .models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 from agendaFinanceira.forms import ( ClienteForm, FornecedorForm, ReceitaForm, DespesaForm, LancamentoContasPagarForm, SaldoAtlForm, SaldoForm)
 from .serializers import DespesaSerializer, ReceitaSerializer, ClienteSerializer
 from dal import autocomplete
@@ -25,9 +28,13 @@ import logging
 from django.db.models import Sum,Func
 from django.db.models.functions import ExtractYear, ExtractMonth
 
+<<<<<<< HEAD
 
 from django.db.models import Sum
 
+=======
+from django.db.models import Sum
+>>>>>>> origin/main
 
 import datetime
 
@@ -250,6 +257,10 @@ def cliente_list(request):
     return render(request, 'cliente_list.html', {
         'cadastros': cadastros
     })
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/main
 @login_required
 def fornecedor_list(request):
     usuario = request.user
@@ -257,7 +268,11 @@ def fornecedor_list(request):
     return render(request, 'fornecedor_list.html', {
         'cadastros': cadastros
     })
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/main
 @login_required    
 def despesa_list(request):
     usuario = request.user
@@ -267,7 +282,10 @@ def despesa_list(request):
     })        
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 @login_required
 def receitas_list(request):
     usuario = request.user
@@ -291,7 +309,11 @@ def receitas_list(request):
         'total_valor': total_valor
     })
 
+<<<<<<< HEAD
 @login_required    
+=======
+@login_required        
+>>>>>>> origin/main
 def saldoatual_list(request):
     usuario = request.user
     cadastros = SaldoAtual.objects.filter(usuario=usuario.id)
@@ -309,7 +331,10 @@ def saldoatual_list(request):
     return render(request, 'saldoatual_list.html', {'cadastros': cadastros})
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 @login_required
 class ListarLancamentosView(ListView):
     model = LancamentoContasPagar

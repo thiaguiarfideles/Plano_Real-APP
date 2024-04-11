@@ -6,8 +6,11 @@
         <h1 class="text-center">Cadastro de Despesa</h1>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 cards_item">
+            <div class="card">
+                <div class="card_content">
         <form method="post" class="cadastro-form">{% csrf_token %}
             <div class="form-group">
                 <label for="{{ form.nome_credor.id_for_label }}">Nome do Credor:</label>
@@ -44,5 +47,8 @@
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
+</div>
+</div>
+</div>
 </div>
 {% endblock content %}

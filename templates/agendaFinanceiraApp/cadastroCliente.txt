@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 {% extends 'agendaFinanceiraApp/base.html' %}
-=======
-{% extends "base.html" %}
-
->>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -17,13 +12,9 @@
 </head>
 <body>
 
-<<<<<<< HEAD
     <div class="row">
         <div class="input-group flex-nowrap">
             <div class="form-control">
-=======
-<div class="container mt-5">
->>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
     <h2></h2>
     <form method="post">
         {% csrf_token %}
