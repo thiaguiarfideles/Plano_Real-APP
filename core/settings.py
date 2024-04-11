@@ -36,10 +36,6 @@ GOOGLE_API_KEY = 'AIzaSyCJBnRLzxMdMI4mF3hAtg_yxC1jCiixtuU'
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
-=======
-
->>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
     'rest_framework',
     #should be immediately above 'django.contrib.admin'
     'django.contrib.sites',
@@ -167,17 +163,12 @@ AUTH_PASSWORD_VALIDATORS = [
     
 ]
 
-<<<<<<< HEAD
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
 STATICFILES_FINDERS: [
     'djangobower.finders.BowerFinder',
-=======
-STATICFILES_FINDERS: [
-        'djangobower.finders.BowerFinder',
->>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 ]
 
 BOWER_COMPONENTS_ROOT = '/schedule/static/'
@@ -222,11 +213,7 @@ DATE_INPUT_FORMATS=['%d/%m/%Y']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
-<<<<<<< HEAD
 STATIC_URL = '/static/'
-=======
-STATIC_URL = "/static/"
->>>>>>> cfad10dc223bf22f288a02a5ff57b5cff8b81f44
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = "/media/"
 

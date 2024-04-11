@@ -6,13 +6,19 @@
 		<h1 class="text-center">Cadastro de Fornecedor</h1>
 	</div>
 </div>
-<div class="row">
-	<div class="col-md-12 col-sm-12">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 cards_item">
+            <div class="card">
+                <div class="card_content">
     	<form method="post" class="cadastro-form">{% csrf_token %}		
 				{{ form.as_p }}
 	    	<button type="submit" class="btn btn-primary" onclick="return validarValor()">Cadastrar</button>
 		</form>
 	</div>
+</div>
+</div>
+</div>
 </div>
 
 {% endblock content %}
