@@ -42,12 +42,10 @@
         });
     </script>
 
-    <!-- Tabela: Total Pago por Período -->
-<!-- Tabela: Total Pago por Período -->
-<!-- Tabela: Total Pago por Período -->
+
 <h2>Total Pago por Período</h2>
 <div class="card-container">
-    <table id="total_por_periodo" class="table table-striped" style="width:100% background-color: white">
+    <table id="total_por_periodo" class="table table-striped" style="width:100%; background-color: white;">
     <thead>
     <tr>
         <th>Período</th>
@@ -64,6 +62,7 @@
 </tbody>
 </table>
 </div>
+
 <script src="{% static 'datatables/js/jquery.dataTables.js' %}"></script>
 <script>
     $(document).ready(function() {
@@ -73,6 +72,7 @@
 <script>
     new DataTable('#total_por_periodo');
 </script>
+
 </body>
 </html>
 {% endblock content %}

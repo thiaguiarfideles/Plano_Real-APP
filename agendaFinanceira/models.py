@@ -174,29 +174,56 @@ class Fornecedor(models.Model):
 
     def __str__(self):
         return self.nm_fornecedor    
+
+
+def upload_to_produto(instance, filename):
+    # Define o caminho onde a imagem do produto será armazenada
+    return 'produtos/{0}/{1}'.format(instance.id_produto, filename)
+
+
+class Produto(models.Model):
+    id_produto = models.AutoField(primary_key=True, verbose_name="ID Produto")
+    nm_produto = models.CharField(max_length=255, verbose_name="Nome do Produto")
+    STATUS_CHOICES = (
+        ('ativo', 'Ativo'),
+        ('inativo', 'Inativo'),
+    )
+    status_produto = models.CharField(max_length=7, choices=STATUS_CHOICES, default='ativo', verbose_name="Status do Produto")
+    dt_criacao = models.DateTimeField(auto_now_add=True, verbose_name="Data de Criação")
+    valor_venda = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Valor de Venda", null=True, blank=True)
+    valor_producao = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Custo de Produção", null=True, blank=True)
+    image = models.FileField(verbose_name="Foto do Produto", upload_to=upload_to_produto, blank=True, null=True)
+    usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, default=None)
+    
+    def __str__(self):
+        return self.nm_produto
+    
+    def calcular_lucro_percentual(self):
+        if self.valor_venda and self.valor_producao:
+            lucro = self.valor_venda - self.valor_producao
+            lucro_percentual = (lucro / self.valor_producao) * 100
+            return round(lucro_percentual, 2)
+        return 0
+
+
     
     
 class Receita(models.Model):
-    usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, default=None)
+    usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, default=None, db_index=True)
     valor = models.DecimalField(max_digits=10, decimal_places=2)
-    data_entrada = models.DateTimeField()
-    cliente = models.ForeignKey('Cliente', on_delete=models.SET_NULL, null=True, verbose_name="Nome do Pagador")
+    quantidade = models.IntegerField(verbose_name="Quantidade", default=1)  # Adiciona o campo quantidade
+    data_entrada = models.DateTimeField(db_index=True)
+    cliente = models.ForeignKey('Cliente', on_delete=models.SET_NULL, null=True, verbose_name="Nome do Pagador", db_index=True)
     forma_recebimento = models.CharField(max_length=90)
     situacao = models.CharField(max_length=2, choices=SITUACOES)
     observacoes = models.TextField()
-    tipo_recebimento = models.CharField(
-        verbose_name="Tipo de Recebimento",
-        choices=TIPO_RECEITA,
-        default='OUTRAS_RECEITAS',
-        max_length=90
-    )
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name="Enviado em"
-    )
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Enviado em", db_index=True)
+    produto = models.ForeignKey(Produto, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.usuario} | {self.get_tipo_recebimento_display()} | {self.data_entrada}"
+        return f"{self.cliente} | {self.produto}"
+
+
 
 
 # Updated upload_to function for Despesa (Expense)
@@ -208,11 +235,11 @@ def upload_to_despesa(instance, filename):
 # Model for Despesa (Expense)
 class Despesa(models.Model):
     id_despesa = models.AutoField(primary_key=True)
-    nome_credor = models.ForeignKey(Fornecedor, on_delete = models.SET_NULL, blank = True, null = True, verbose_name="Nome do Fornecedor")
-    usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, default=None)
+    nome_credor = models.ForeignKey(Fornecedor, on_delete = models.SET_NULL, blank = True, null = True, verbose_name="Nome do Fornecedor", db_index=True)
+    usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, default=None, db_index=True)
     valor = models.DecimalField(max_digits=10, decimal_places=2)
-    data_vencimento = models.DateTimeField()
-    situacao = models.CharField(max_length=11, choices=STATUS_CHOICES)
+    data_vencimento = models.DateTimeField(db_index=True)
+    situacao = models.CharField(max_length=11, choices=STATUS_CHOICES, db_index=True)
     observacoes = models.TextField()
     tipo_despesa = models.CharField(verbose_name="Tipo de Despesa",choices=STATUS_PAGAMENTO,default='CONTAS',max_length=90)
     created_at = models.DateTimeField(auto_now_add=True,verbose_name="Enviado em")
@@ -387,3 +414,5 @@ class LancamentoContasPagar(models.Model):
 
     def __str__(self):
         return self.documento       
+
+

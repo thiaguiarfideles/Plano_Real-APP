@@ -1,0 +1,67 @@
+{% extends 'agendaFinanceiraApp/base2.html' %}
+{% load filtros %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Produto</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard de Produto</h1>
+        <p>Total de Produtos: {{ total_produtos }}</p>
+        
+        <!-- Gráfico de Barras Radiais -->
+        <div id="grafico"></div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Total de Vendas</th>
+                    <th>Quantidade Vendida</th>  <!-- Nova coluna para exibir a quantidade de produtos vendidos -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for produto in vendas_por_produto %}
+                <tr>
+                    <td>{{ produto.nm_produto }}</td>
+                    <td>{{ produto.total_vendas }}</td>
+                    <td>{{ total_produtos_vendidos|index:forloop.counter0 }}</td> <!-- Exibe a quantidade de produtos vendidos -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Highcharts.chart('grafico', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Vendas por Produto'
+                },
+                xAxis: {
+                    categories: {{ categorias | safe }}
+                },
+                yAxis: {
+                    title: {
+                        text: 'Total de Vendas'
+                    }
+                },
+                series: [{
+                    name: 'Total de Vendas',
+                    data: {{ total_vendas | safe }}
+                }]
+            });
+        });
+    </script>
+</body>
+</html>
+{% endblock content %}

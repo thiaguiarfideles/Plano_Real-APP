@@ -30,6 +30,8 @@
                     <tr>
                         <th>Pagador</th>
                         <th>Valor</th>
+                        <th>Quantidade</th>
+                        <th>Produto</th>
                         <th>Data Entrada</th>
                         <th>Forma de Recebimento</th>
                         <th>Situação</th>
@@ -43,6 +45,8 @@
                     <tr>
                         <td>{{ receita.cliente.nm_cliente }}</td>
                         <td>{{ receita.valor }}</td>
+                        <td>{{ receita.quantidade }}</td>
+                        <td>{{ receita.produto }}</td>
                         <td>{{ receita.data_entrada|date:"SHORT_DATE_FORMAT" }}</td>
                         <td>{{ receita.forma_recebimento }}</td>
                         <td>{{ receita.situacao }}</td>

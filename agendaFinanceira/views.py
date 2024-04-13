@@ -2,33 +2,30 @@ import datetime
 from django.utils import timezone
 from datetime import timedelta
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView
 #from isoduration import format_duration
 from agendaFinanceira import models
 from usuarios.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_object_or_404
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import authentication_classes, permission_classes
-from agendaFinanceira.models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual,Cliente
-from .models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual
+from agendaFinanceira.models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual,Cliente, Produto
+from .models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa, SaldoAtual,Produto
 
 
-from agendaFinanceira.forms import ( ClienteForm, FornecedorForm, ReceitaForm, DespesaForm, LancamentoContasPagarForm, SaldoAtlForm, SaldoForm)
+from agendaFinanceira.forms import ( ClienteForm, FornecedorForm, ReceitaForm, DespesaForm, LancamentoContasPagarForm, SaldoAtlForm, SaldoForm, ProdutoForm)
 from .serializers import DespesaSerializer, ReceitaSerializer, ClienteSerializer
 from dal import autocomplete
 import logging
-from django.db.models import Sum,Func
+from django.db.models import Sum,Func, Count
 from django.db.models.functions import ExtractYear, ExtractMonth
-
-
-from django.db.models import Sum
-
+from django.db.models import F, ExpressionWrapper, DecimalField
+from agendaFinanceira.filters import register
 
 
 import datetime
@@ -66,14 +63,18 @@ def cadastrar_receita(request):
             receita = form.save(commit=False)
             receita.usuario = request.user
             receita.save()
+            # Obter o produto selecionado no formulário
+            produto_id = request.POST.get('produto')
+            if produto_id:
+                # Associar o produto à receita
+                receita.produto_id = produto_id
+                receita.save()
             messages.success(request, 'Receita cadastrada com sucesso!')
             return redirect('home')
         else:
             messages.error(request, 'Erro ao cadastrar Receita. Verifique os campos.')
     else:
         form = ReceitaForm()
-
-    print(form)  # Debug
 
     return render(request, 'agendaFinanceiraApp/cadastroReceita.html', {'form': form})
 
@@ -238,6 +239,8 @@ class ClienteAutocomplete(autocomplete.Select2QuerySetView):
 
         return qs
 
+    
+
 class ClienteListView(ListView):
     model = Cliente
     queryset = Cliente.objects.order_by('nm_cliente')  # Substitua 'your_field' pelo campo pelo qual deseja ordenar
@@ -343,11 +346,96 @@ def dashboard(request):
     .values('ano', 'mes') \
     .annotate(total=Sum('valor'))
     
+    
 
     context = {
         'total_por_cliente': total_por_cliente,
-        'total_por_periodo': total_por_periodo,
+        'total_por_periodo': total_por_periodo
     }
+
     return render(request, 'agendaFinanceiraApp/dashboard.html', context)
+
+@login_required
+@register.filter
+def dashboard_produto(request):
+    usuario = request.user
+    produtos = Produto.objects.filter(usuario=usuario)
+    
+    # Consulta para contar a quantidade de produtos
+    total_produtos = produtos.count()
+    
+    # Consulta para obter a contagem de vendas por produto
+    vendas_por_produto = produtos.annotate(total_vendas=Count('receita')).order_by('-total_vendas')[:5]
+    
+    # Calcular o total de produtos vendidos para cada produto
+    total_produtos_vendidos = []
+    for produto in produtos:
+        total_vendido_produto = Receita.objects.filter(produto=produto).aggregate(total=Sum('quantidade'))['total']
+        total_produtos_vendidos.append(total_vendido_produto or 0)
+    
+    # Preparar dados para o gráfico de barras radiais
+    categorias = [produto.nm_produto for produto in vendas_por_produto]
+    total_vendas = [produto.total_vendas for produto in vendas_por_produto]
+    
+    context = {
+        'produtos': produtos,
+        'total_produtos': total_produtos,
+        'vendas_por_produto': vendas_por_produto,
+        'categorias': categorias,
+        'total_vendas': total_vendas,
+        'total_produtos_vendidos': total_produtos_vendidos,  # <-- Passa a quantidade de produtos vendidos para o template
+    }
+    
+    return render(request, 'agendaFinanceiraApp/dashboard_produto.html', context)
+
+
+
+
+
+
+class ProdutoAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        qs = Produto.objects.all()
+
+        if self.q:
+            qs = qs.filter(nm_produto__icontains=self.q)
+
+        return qs
+
+
+@login_required
+def listar_produtos(request):
+    produtos = Produto.objects.filter(usuario=request.user)
+    return render(request, 'agendaFinanceiraApp/listar_produtos.html', {'produtos': produtos})
+
+
+@login_required
+def cadastrar_produto(request):
+    if request.method == 'POST':
+        form = ProdutoForm(request.POST)
+        if form.is_valid():
+            produto = form.save(commit=False)
+            produto.usuario = request.user
+            produto.save()
+            return redirect('listar_produtos')
+    else:
+        form = ProdutoForm()
+    return render(request, 'agendaFinanceiraApp/cadastrar_produto.html', {'form': form})
+
+def editar_produto(request, produto_id):
+    produto = get_object_or_404(Produto, pk=produto_id)
+    if request.method == 'POST':
+        form = ProdutoForm(request.POST, request.FILES, instance=produto)
+        if form.is_valid():
+            form.save()
+            return redirect('listar_produtos')
+    else:
+        form = ProdutoForm(instance=produto)
+    return render(request, 'agendaFinanceiraApp/editar_produto.html', {'form': form})
+
+def excluir_produto(request, id_produto):
+    produto = get_object_or_404(Produto, id_produto=id_produto)
+    produto.delete()
+    return redirect('agendaFinanceiraApp/listar_produtos')
 
 

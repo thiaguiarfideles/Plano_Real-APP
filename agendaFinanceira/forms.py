@@ -2,7 +2,7 @@ from django.forms import ModelForm
 from django.urls import reverse
 from django import forms
 from django.forms import ModelForm
-from .models import Cliente, Receita, Despesa, LancamentoContasPagar, Fornecedor, SaldoAtual, SaldoInicial
+from .models import Cliente, Receita, Despesa, LancamentoContasPagar, Fornecedor, SaldoAtual, SaldoInicial, Produto
 from dal import autocomplete
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Div, Submit
@@ -116,12 +116,26 @@ class DespesaForm(ModelForm):
         
 
 
+class ProdutoForm(forms.ModelForm):
+    class Meta:
+        model = Produto
+        fields = ['nm_produto', 'status_produto', 'valor_venda', 'valor_producao', 'image'] 
+        widgets = {
+            'dt_criacao': DateInput(attrs={'type': 'date'})
+        }
+        exclude = ['usuario']        
+        
+
+
 class ReceitaForm(forms.ModelForm):
+    produto = forms.ModelChoiceField(queryset=Produto.objects.all(), required=False)  
+
     class Meta:
         model = Receita
-        fields = ['valor', 'cliente', 'data_entrada', 'forma_recebimento', 'situacao', 'observacoes', 'tipo_recebimento']
+        fields = ['valor', 'cliente', 'data_entrada', 'forma_recebimento', 'situacao', 'observacoes', 'quantidade', 'produto']  
         widgets = {
             'cliente': autocomplete.ModelSelect2(url='cliente-autocomplete'),
+            'produto': autocomplete.ModelSelect2(url='produto-autocomplete'),
             'data_entrada': DateInput(attrs={'type': 'date'})
         }
         exclude = ['usuario', 'created_at']
@@ -229,3 +243,5 @@ class SaldoAtlForm(ModelForm):
         model = SaldoAtual
         fields = ['banco','saldo_atual','data_atual']
         exclude = ['usuario', 'created_at']        
+        
+        

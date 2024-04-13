@@ -12,6 +12,10 @@
 
         <form method="post" class="cadastro-form">{% csrf_token %}
             <div class="form-group">
+                <a href="{% url 'cadastrar_cliente' %}" class="btn btn-primary">Cadastrar Novo Cliente</a>
+            </div>
+            <div class="row">
+            <div class="form-group">
                 <label for="id_cliente" class="form-label"></label>
                 {{ form.cliente }}
                 <script type="text/javascript">
@@ -55,9 +59,11 @@
                         });
                     });
                 </script>
-                <div class="form-group">
-                    <a href="{% url 'cadastrar_cliente' %}" class="btn btn-primary">Cadastrar Novo Cliente</a>
-                </div>
+            </div>
+        </div>
+            <div class="form-group">
+                <label for="id_produto" class="form-label">Produto:</label>
+                {{ form.produto }}
             </div>
             
                  
@@ -65,15 +71,13 @@
                 <label for="id_valor" class="form-label">Valor:</label>
                 {{ form.valor }}
             </div>
-            <div>
             <div class="form-group">
                 <label for="id_data_entrada" class="form-label">Data de Entrada:</label>
                 {{ form.data_entrada }}
             </div>
-        </div>
             <div class="form-group">
-                <label for="id_tipo_recebimento" class="form-label">Tipo de Recebimento:</label>
-                {{ form.tipo_recebimento }}
+                <label for="id_quantidade" class="form-label">Quantidade:</label>
+                {{ form.quantidade }}
             </div>
             <div class="form-group">
                 <label for="id_forma_recebimento" class="form-label">Forma de Recebimento:</label>
