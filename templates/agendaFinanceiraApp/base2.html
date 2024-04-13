@@ -37,45 +37,66 @@
 
     <!-- Custom JS -->
     <script src="{% static 'js/custom.js' %}"></script>
-<style>
-    .card {
-        position: relative;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        width: 90%;
-        /* Defina a largura máxima desejada */
-        height: 400px;
-        /* Defina a altura desejada */
-        overflow: hidden;
-        /* Para garantir que o conteúdo não extrapole o card */
-        word-wrap: break-word;
-        background-color: #fff;
-        background-clip: border-box;
-        border: 2px solid rgba(0, 0, 0, .125);
-        border-radius: 0.35rem;
-        transition: transform 0.2s;
-    }
+    <style>
+        .card {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 90%;
+            /* Defina a largura máxima desejada */
+            height: 400px;
+            /* Defina a altura desejada */
+            overflow: hidden;
+            /* Para garantir que o conteúdo não extrapole o card */
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 2px solid rgba(0, 0, 0, .125);
+            border-radius: 0.35rem;
+            transition: transform 0.2s;
+        }
 
-    .card img {
-        max-width: 70%;
-        /* Garanta que a imagem não exceda o tamanho do card */
-        height: auto;
-        /* Ajuste a altura automaticamente para manter a proporção original */
-        object-fit: cover;
-        /* Ajuste a imagem para cobrir todo o espaço disponível */
-    }
+        .card img {
+            max-width: 70%;
+            /* Garanta que a imagem não exceda o tamanho do card */
+            height: auto;
+            /* Ajuste a altura automaticamente para manter a proporção original */
+            object-fit: cover;
+            /* Ajuste a imagem para cobrir todo o espaço disponível */
+        }
+        .produto-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .produto-card .card {
+            width: calc(33.33% - 20px); /* Defina a largura desejada para cada card, ajustando conforme necessário */
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .produto-card .card {
+                width: calc(50% - 20px); /* Altera a largura dos cards para 50% em dispositivos menores */
+            }
+        }
 
-    .card:hover {
-        transform: translateY(-5px);
-        /* Efeito de levantar ligeiramente ao passar o mouse */
-    }
+        .card:hover {
+            transform: translateY(-5px);
+            /* Efeito de levantar ligeiramente ao passar o mouse */
+        }
 
-    .navbar-light .navbar-brand {
-        color: rgba(210, 210, 210);
-    }
-</style>
+        .navbar-light .navbar-brand {
+            color: rgba(210, 210, 210);
+        }
+
+        @media (max-width: 767px) {
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>

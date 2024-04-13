@@ -13,37 +13,38 @@
     <h1>Listar Produtos</h1>
     <ul>
         <div class="container mt-5">
-            <div class="row">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
                 {% for produto in produtos %}
-                <div class="col-md-4 mb-4">
+                <div class="col">
                     <div class="card">
-                            <a href="{% url 'listar_produtos' %}"></a>
+                        <a href="{% url 'listar_produtos' %}"></a>
+                        <div class="card-body">
+                            {% if produto.image %}
+                                <img src="{{ produto.image.url }}" class="card-img-top" alt="{{ produto.nm_produto }}">
+                            {% else %}
+                                <p>Imagem não disponível</p>
+                            {% endif %}
                             <div class="card-body">
-                                    <img src="{{ produto.image.url }}" class="card-img-top" alt="Imagem do produto">
-                                    <div class="card-body">
-                                        <p class="card-title">Nome Produto: {{ produto.nm_produto }}</p>
-                                        <p class="card-text">Status: {{ produto.status_produto }}</p>
-                                        <p class="card-text">Valor de venda: {{ produto.valor_venda }}</p>
-                                        <p class="card-text">Valor de produção: {{ produto.valor_producao }}</p>
-                                </div>
-                        <li>
-                            <form action="{% url 'editar_produto' produto_id=produto.id_produto %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">Editar Produto</button>
-                            </form>
-                        </li>
-                        
+                                <p class="card-title">Nome Produto: {{ produto.nm_produto }}</p>
+                                <p class="card-text">Status: {{ produto.status_produto }}</p>
+                                <p class="card-text">Valor de venda: {{ produto.valor_venda }}</p>
+                                <p class="card-text">Valor de produção: {{ produto.valor_producao }}</p>
+                            </div>
+                            <li>
+                                <form action="{% url 'editar_produto' produto_id=produto.id_produto %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Editar Produto</button>
+                                </form>
+                            </li>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
-                
-        {% endfor %}
     </ul>
 
     <a href="{% url 'cadastrar_produto' %}" class="btn btn-primary">Cadastrar Produto</a>
 </body>
 </html>
 {% endblock content %}
-
