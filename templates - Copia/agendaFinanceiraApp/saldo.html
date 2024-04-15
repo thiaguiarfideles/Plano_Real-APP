@@ -1,0 +1,35 @@
+{% extends 'agendaFinanceiraApp/base.html' %} 
+ 
+ {% block content %}
+<h1 class="text-center">Consultar Saldo</h1>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div id="filtroSaldo" class="panel-body">
+				<form method="get" action="{% url 'saldo' %}" class="">
+					{% csrf_token %}
+					<label for="txbDataInicio"> Data Inicial: </label>
+					<input type="text" id="txbDataInicio" name="data_inicio" required> <span>*</span>
+
+					<label for="txbDataFim">Data Final:</label>
+					<input type="text" id="txbDataFim" name="data_fim" required> <span>*</span>
+
+					<input type="submit" value="pesquisar" class="btn btn-primary" style="width: 20%">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+    	<div class="panel panel-default">
+			<div class="panel-body">
+        		<p> <strong> Total de Receitas no periodo: </strong> {{ saldo_periodo.receitas }}</p> 
+        		<p> <strong> Total de Despesas no periodo: </strong> {{ saldo_periodo.despesas }}</p> 
+        		<p> <strong> Saldo no periodo: </strong> {{ saldo_periodo.saldo }}</p> 
+			</div>
+    	</div>
+	</div>
+</div>
+{% endblock content %}

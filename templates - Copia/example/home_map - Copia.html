@@ -1,0 +1,126 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Localização</title>
+
+<style>
+.container {
+  position: center;
+  width: 100%;
+}
+
+.img {
+  width: 50%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 90;
+  background-color: #FF3300;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.top-section {
+  position: relative;
+}
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+        box-shadow: 0 0 50px #00000070;
+        transition: transform 0.3s;
+        font-family: sans-serif;
+        background: linear-gradient(69deg, #87CEFF 10%, #A4D3EE 20%, #BCD2EE 20%, #036ed9 50%);
+        display: block;
+        width: 100%;
+        color: white;
+        text-decoration: underline;
+
+
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 1;
+  }
+}
+
+</style>
+
+  <!-- needed for JS/GoogleMaps lookup -->
+  {{ form.media }}
+</head>
+<body>
+  {% if not google_api_key_set %}
+    <p>Localização.
+  {% else %}
+    <div class="row">
+      <div class="card">
+      <div class="container">
+      <img src="/media/good_story.png" class="mx-auto d-block" style="width:78%"/> 
+      <div class="card-body text-center">
+        <h3 class="card-title">Envie Sua localização</h3>
+        
+      
+      <p class="card-text"></p>
+          
+    <form action="" method="post">
+      {% csrf_token %}
+      {% load crispy_forms_tags %}
+      {% crispy form %}
+      
+    </form>
+      <p class="card-text"><small class="text-muted">Clique aqui e envie sua localização</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+    {% if success %}
+    {% endif %}
+    <p>Total de endereços salvos: {{ addresses.count }}</p>
+  {% endif %}
+ 
+ <script>
+   
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+ </script>
+</body>
+</html>
+
+

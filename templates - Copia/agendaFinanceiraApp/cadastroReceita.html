@@ -1,0 +1,113 @@
+{% extends 'agendaFinanceiraApp/base.html' %}
+
+{% block content %}
+<div class="row">
+        <p class="card_text">Cadastro de Receitas.</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 cards_item">
+            <div class="card">
+                <div class="card_content">
+
+        <form method="post" class="cadastro-form">{% csrf_token %}
+            <div class="form-group">
+                <a href="{% url 'cadastrar_cliente' %}" class="btn btn-primary">Cadastrar Novo Cliente</a>
+            </div>
+            <div class="row">
+            <div class="form-group">
+                <label for="id_cliente" class="form-label"></label>
+                {{ form.cliente }}
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        console.log("Document ready!");
+                        console.log("Cliente selecionado:", $("#id_cliente").val()); // Mensagem de depuração
+                        $("#id_cliente").select2({
+                            placeholder: "Selecione um cliente",
+                            ajax: {
+                                url: "{% url 'cliente-autocomplete' %}",
+                                dataType: 'json',
+                                delay: 250,
+                                data: function(params) {
+                                    return {
+                                        q: params.term, // search term
+                                        page: params.page
+                                    };
+                                },
+                                processResults: function(data, params) {
+                                    console.log("Data received:", data); // Log dos dados recebidos
+                                    params.page = params.page || 1;
+                                    return {
+                                        results: data.results,
+                                        pagination: {
+                                            more: data.pagination.more
+                                        }
+                                    };
+                                },
+                                cache: true
+                            },
+                            escapeMarkup: function(markup) {
+                                return markup;
+                            }, // let our custom formatter work
+                            minimumInputLength: 1,
+                            templateResult: function(repo) {
+                                return repo.text; // Use 'text' como o campo de exibição
+                            },
+                            templateSelection: function(repo) {
+                                return repo.text; // Use 'text' como o campo de seleção
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+            <div class="form-group">
+                <label for="id_produto" class="form-label">Produto:</label>
+                {{ form.produto }}
+            </div>
+            
+                 
+            <div class="form-group">
+                <label for="id_valor" class="form-label">Valor:</label>
+                {{ form.valor }}
+            </div>
+            <div class="form-group">
+                <label for="id_data_entrada" class="form-label">Data de Entrada:</label>
+                {{ form.data_entrada }}
+            </div>
+            <div class="form-group">
+                <label for="id_quantidade" class="form-label">Quantidade:</label>
+                {{ form.quantidade }}
+            </div>
+            <div class="form-group">
+                <label for="id_forma_recebimento" class="form-label">Forma de Recebimento:</label>
+                {{ form.forma_recebimento }}
+            </div>
+            <div class="form-group">
+                <label for="id_situacao" class="form-label">Situação:</label>
+                {{ form.situacao }}
+            </div>
+            <div class="mb-3">
+                {{ form.observacoes }}
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+      // Inicializa o Datepicker no elemento com ID 'data-entrada'
+      $('#data_entrada').datepicker({
+          format: 'dd/mm/yyyy', // Define o formato da data
+          language: 'pt-BR', // Define o idioma para português do Brasil
+          autoclose: true, // Fecha o seletor de data ao selecionar uma data
+          todayHighlight: true // Destaca a data atual
+      });
+  });
+  
+
+  </script>
+{% endblock content %}

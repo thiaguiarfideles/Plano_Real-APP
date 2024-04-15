@@ -1,0 +1,96 @@
+{% extends "laboratorio/_base.html" %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+<h6>This table was rendered using <a href = "https://pypi.org/project/django-filter/">django-filter</a>
+<p>Django-filter is a reusable Django application allowing users to declaratively add dynamic QuerySet filtering from URL parameters.
+
+</p></h6><br>
+
+  <form method="get">
+    <div class="well">
+      <h4 style="margin-top: 0">Filter</h4>
+      <div class="row">
+        <div class="form-group col-sm-4 col-md-3">
+          {{ filter.form.nr_seq_exame.label_tag }}
+          {% render_field filter.form.nr_seq_exame class="form-control" %}
+        </div>
+        <div class="form-group col-sm-4 col-md-3">
+          {{ filter.form.nm_exame.label_tag }}
+          {% render_field filter.form.nm_exame class="form-control" %}
+        </div>
+        <div class="form-group col-sm-4 col-md-3">
+          {{ filter.form.cd_exame_integracao.label_tag }}
+          {% render_field filter.form.cd_exame_integracao class="form-control" %}
+        </div>
+        <div class="form-group col-sm-4 col-md-3">
+          {{ filter.form.ie_solicitacao.label_tag }}
+          {% render_field filter.form.ie_solicitacao class="form-control" %}
+        </div>
+        <div class="form-group col-sm-4 col-md-3">
+            {{ filter.form.Cough.ie_situacao }}
+            {% render_field filter.form.ie_situacao class="form-control" %}
+          </div>
+        <div class="form-group col-sm-4 col-md-3">
+            {{ filter.form.Cough.cd_estabelecimento }}
+            {% render_field filter.form.cd_estabelecimento class="form-control" %}
+          </div>
+        <div class="form-group col-sm-4 col-md-3">
+            {{ filter.form.Cough.ie_situacao }}
+            {% render_field filter.form.ie_situacao class="form-control" %}
+          </div>
+        <div class="form-group col-sm-4 col-md-3">
+            {{ filter.form.Cough.nm_fantasia_estab }}
+            {% render_field filter.form.nm_fantasia_estab class="form-control" %}
+          </div>
+        <div class="form-group col-sm-4 col-md-3">
+            {{ filter.form.Cough.seq_grupo }}
+            {% render_field filter.form.seq_grupo class="form-control" %}
+          </div>        
+
+        
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <span class="glyphicon glyphicon-search"></span> Filter
+      </button>
+    </div>
+  </form>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+                <th>nr_seq_exame</th>
+                <th>nm_exame</th>
+                <th>cd_exame</th>
+                <th>cd_exame_integracao</th>
+                <th>ie_solicitacao</th>
+                <th>ie_situacao</th>
+                <th>cd_estabelecimento</th>
+                <th>nm_fantasia_estab</th>
+                <th>seq_grupo</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in filter.qs %}
+        <tr>
+                <td>{{item.nr_seq_exame}}</td>
+                <td>{{item.nm_exame}}</td>
+                <td>{{item.cd_exame}}</td>
+                <td>{{item.cd_exame_integracao}}</td>
+                <td>{{item.ie_solicitacao}}</td>
+                <td>{{item.ie_situacao}}</td>  
+                <td>{{item.cd_estabelecimento}}</td>
+                <td>{{item.nm_fantasia_estab}}</td>
+                <td>{{item.seq_grupo}}</td>
+          
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">No data</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

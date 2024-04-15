@@ -1,0 +1,78 @@
+{% extends 'agendaFinanceiraApp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Plano_Real-APP/agendaFinanceira/templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="{% static 'highcharts/highcharts.js' %}"></script>
+</head>
+<body>
+    <!-- Gráfico de Barras: Total Recebido por Cliente -->
+    <div id="total_por_cliente_chart"></div>
+
+    <!-- JavaScript para renderizar o gráfico -->
+    <script>
+        Highcharts.chart('total_por_cliente_chart', {
+            accessibility: {
+                enabled: false
+            },
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Total Recebido por Cliente'
+            },
+            xAxis: {
+                categories: [{% for item in total_por_cliente %}"{{ item.cliente__nm_cliente }}",{% endfor %}]
+            },
+            yAxis: {
+                title: {
+                    text: 'Valor'
+                }
+            },
+            series: [{
+                name: 'Total Recebido',
+                data: [{% for item in total_por_cliente %}{{ item.total }},{% endfor %}]
+            }]
+        });
+    </script>
+
+
+<h2>Total Pago por Período</h2>
+<div class="card-container">
+    <table id="total_por_periodo" class="table table-striped" style="width:100%; background-color: white;">
+    <thead>
+    <tr>
+        <th>Período</th>
+        <th>Total Pago</th>
+    </tr>
+</thead>
+<tbody>
+    {% for item in total_por_periodo %}
+        <tr>
+            <td>{{ item.ano }}/{{ item.mes }}</td>
+            <td>{{ item.total }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</div>
+
+<script src="{% static 'datatables/js/jquery.dataTables.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        $('#total_por_periodo').DataTable();
+    });
+</script>
+<script>
+    new DataTable('#total_por_periodo');
+</script>
+
+</body>
+</html>
+{% endblock content %}

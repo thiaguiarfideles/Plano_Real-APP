@@ -1,0 +1,390 @@
+
+<!doctype html>
+<!--
+	Itsy by FreeHTML5.co
+	Twitter: https://twitter.com/fh5co
+	Facebook: https://fb.com/fh5co
+	URL: https://freehtml5.co
+-->
+<html class="home blog no-js" lang="en-US">
+<head>
+  {% load static %} {% load bootstrap4 %}
+    <title>Casa da Neidy</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC%3A400%2C700%7CLato%3A400%2C700%2C400italic%2C700italic&amp;ver=4.9.8"
+          type="text/css" media="screen"/>
+             
+
+<style>
+    @import url("{% static 'style_home.css')")
+</style>
+<style>
+    @import url("{% static 'print_home.css')")
+</style>
+
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" id="lt-ie9-css" href="ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+<script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.0.0-beta.9/plugins.min.js"></script>  
+<script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="home sticky-menu sidebar-off" id="top">
+
+<header class="header">
+
+    <div class="header-wrap">
+
+        <div class="logo plain logo-left">
+            <div class="site-title">
+                <a href="index.html" title="Go to Home">
+                <a href="#page-top" class="s123-site-logo navbar-brand s123-w-l-s page-scroll p-m-b-highlight s123-resize-observer" id="OutlineHandler-tmp-638963a07d6e8"><img alt="Casa da Neidy" class="img-responsive" src="https://static1.s123-cdn-static-a.com/uploads/7157503/400_638962f19061c.png"><span class="website-name website-name-preview-helper "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span></a></a>
+            </div>
+        </div><!-- /logo -->
+
+
+        <nav id="nav" role="navigation">
+            <div class="table">
+                <div class="table-cell">
+                    <ul id="menu-menu-1">
+                        <li class="menu-item">
+                            <a href="{% url 'home' %}">Home</a></li>
+                        <li class="menu-item">
+                            <a href="{% url 'admin:index' %}">Administrador</a></li>    
+                        <li class="menu-item">
+                            <a href="{% url 'blog_home' %}">BLOG</a></li>
+                        <li class="menu-item">
+                            <a href="#">Usuario</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="{% url 'usuarios:editar_perfil' %}">Criar Perfil</a></li>
+                                <li class="menu-item">
+                                    <a href="{% url 'usuarios:perfil_usuario' %}">Ver Perfil</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Cadastro Usuario</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="{% url 'person:home_map' %}">Dados do Cliente</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{% url 'listar' %}">Produtos | Estoque</a></li>
+                        <li class="menu-item">
+                            <a href="single.html">Contatos</a></li>
+                        <li class="menu-inline menu-item">
+                            <a title="Instagram" href="https://www.instagram.com/neidyaguiiar/">
+                                <i class="fa fa-instagram"></i><span class="i">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="menu-inline menu-item">
+                            <a title="Whatsapp" href="https://wa.me/5521974713339">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i><span class="i">Compre pelo Whatsapp</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <a href="#nav" class="menu-trigger"><i class="fa fa-bars"></i></a>
+
+        <a href="#topsearch" class="search-trigger"><i class="fa fa-search"></i></a>
+
+    </div>
+
+</header>
+
+
+<div class="hero" style="background-image: url('media/images_home/ingred.jpg'); text-align:right;">
+    <div class="hero-inner">
+        <div class="inner">
+            <h2><span class="border border-top border-bottom">Casa da</span></h2>
+            <h1><span class="border border-top border-bottom">Neidy</span></h1>
+            <div class="hero-line-one"></div>
+            <div class="hero-line-two"><span class="border border-bottom"><a href="https://freehtml5.co" style="color:#FFF;">COMIDA CASEIRA</a></span></div>
+        </div>
+
+        <a class="more-arrow" href="#content"><i class="fa fa-chevron-down"></i><span>Scroll Down</span></a>
+
+    </div>
+</div>
+<div class="home-sticky" id="content">
+
+    <h2 class="home-sticky-title">MINHAS RECEITAS FAVORITAS</h2>
+
+
+    <div class="sticky-inner">
+
+        <aside class="home-sticky-post post has-post-thumbnail sticky">
+
+  		    <span class="post-image">
+  				<a href="#">
+  				<img width="502" height="502" src="media/images_home/p_2.png"
+                     class="attachment-sticky size-sticky" alt=""/>
+  				</a>
+  		    </span>
+
+            <div class="inner">
+                <h3 class="entry-title">
+                    <a href="#">Pudim de Leite Condensado</a>
+                </h3>
+
+                <ul class="meta top">
+                    <li class="time">
+                        <a href="#">
+                            <a><br>Delicioso Pudim no Pote</a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <aside class="home-sticky-post post has-post-thumbnail sticky ">
+
+            <span class="post-image">
+  				<a href="#">
+  				<img width="502" height="502" src="media/images_home/nhoqueprato2.jpg"
+                     class="attachment-sticky size-sticky" alt=""/>
+  				</a>
+  		    </span>
+
+            <div class="inner">
+                <h3 class="entry-title">
+                    <a href="#">Nhoque</a>
+                </h3>
+
+                <ul class="meta top">
+                    <li class="time">
+                        <a href="#"
+                           title="The Apothecary">
+                            <a><br>Nhoque nos sabores de Cane e Frango</a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <aside class="home-sticky-post post has-post-thumbnail sticky">
+
+  		    <span class="post-image">
+                <a href="#">
+                    <img width="502" height="502" src="media/images_home/empadao2.jpg"
+                     class="attachment-sticky size-sticky" alt=""/>
+  				</a>
+  		    </span>
+
+            <div class="inner">
+                <h3 class="entry-title">
+                    <a href="#">Empadão</a>
+                </h3>
+
+                <ul class="meta top">
+                    <li class="time">
+                        <a href="#">
+                            <a><br>Empadão nos sabores de Cane, Frango e Camarão</a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+        
+
+    </div>
+
+
+</div>
+<div class="wrap full-wrap">
+    <div class="main-wrap">
+        <section class="main main-archive">
+            <div class="loop">
+
+
+                <article class="post format-gallery post_format-post-format-gallery">
+
+
+                    <a href="#"
+                       title="Running through Chicago">
+                        <div class="part-gallery">
+                            <div class="flexslider">
+                                <ul class="slides">
+
+                                    <li><span class="post-image"><img src="media/images_home/nhoqueprato.jpg"
+                                                                      alt="Run-3"/></span></li>
+                                    <li><span class="post-image"><img src="media/images_home/p_3.png"
+                                                                      alt="Run-1"/></span></li>
+                                    <li><span class="post-image"><img src="media/images_home/banoff.jpg"
+                                                                      alt="Run-2"/></span></li>
+                                    <li><span class="post-image"><img src="media/images_home/bolo-de-pote-0.jpg"
+                                                                      alt="Run-2"/></span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <div class="inner">
+
+                        <h2 class="entry-title">
+                            <a href="#"
+                               title="Casa da Neidy">
+                                Comida Caseira com gosto de Casa. </a>
+                        </h2>
+                        <ul class="meta top">
+                            <li class="time">
+                                <a href="#"
+                                   title="Se você está procurando uma refeição gostosa, este é o caminho a seguir!">
+                                    <a><br></a>
+                                </a></li>
+
+                        </ul>
+                        <div class="post-content">
+                            <p>Na casa da Neidy, acreditamos que a comida caseira e os doces caseiros, tortas e bolos são algumas das refeições mais reconfortantes e satisfatórias. Seja para uma ocasião especial ou apenas uma noite com a família, nada supera o cheiro e o sabor da comida caseira. Com isso em mente, elaboramos uma coleção de receitas para você experimentar em casa. De tortas clássicas a bolos, temos algo para todos. Então venha se juntar a nós e explorar o mundo da comida caseira.</p>
+                            <blockquote><p>"Nossos Produtos”<cite></cite>Selecione seus itens</p></blockquote>
+                            <p>Para que você nunca perca uma deliciosa refeição. Quer você esteja procurando uma refeição completa ou apenas um lanche, agora você pode sempre ter o suficiente de todos os seus favoritos. Desde aperitivos e entradas até sobremesas, você pode ter certeza de que sempre terá seus favoritos sempre à mão. <a
+                                        href="https://lojadaneidy.herokuapp.com/estoquevenda/listar/"
+                                        class="more-link">Estoque | Produto</a></p>
+                        </div>
+                            <blockquote><p>"Criar Perfil”<cite></cite></p></blockquote>
+                                                        <div class="post-content">
+                                <div class="w3-quarter">
+      <img src="media/images_home/v1052-049.jpg" alt="Cherries" style="width:300%" width="1200" height="200">
+      <h3>Perfil de usuario.</h3>
+      <p><br>Criei seu perfil e nos diga seus gostos, suas receitas preferidas.</p>
+      <p>Queremos saber quem é você !</p>
+    </div>
+
+                            <div class="post-content">
+                            <p>Estamos entusiasmados em lhe oferecer a oportunidade de criar seu próprio perfil e compartilhar suas informações, gostos e emoções conosco. Com este perfil, você pode explorar o mundo do Restaurante e criar sua própria experiência personalizada. Aproveite nossas ofertas exclusivas e encontre a refeição perfeita para você! Vamos começar e criar seu perfil hoje mesmo!</p>
+                             <a
+                                        href="https://lojadaneidy.herokuapp.com/prestador/perfil/editar"
+                                        class="more-link">Crie seu Pefil de Usuario</a></p>
+
+                        </div>
+                            <blockquote><p>"Visualizar Perfil”<cite></cite></p></blockquote>
+
+                            <div class="post-content">
+                                <div class="w3-quarter">
+      <img src="media/images_home/avatar.jpg" alt="Cherries" style="width:300%" width="1200" height="200">
+      <h3>Visualizar perfil do usuario.</h3>
+      <p><br>Criei seu perfil e nos diga seus gostos, suas receitas preferidas.</p>
+      <p>Qual é seu desejo secreto?</p>
+    </div>
+
+
+                             <a
+                                        href="https://lojadaneidy.herokuapp.com/prestador/perfil"
+                                        class="more-link">Ver seu Pefil de Usuario</a></p>
+
+                        </div>
+
+
+   
+
+                    </div>
+                </article>
+
+
+              
+              
+            </div>
+
+
+        </section>
+
+
+    </div><!-- /main-wrap -->
+
+
+</div><!-- /wrap -->
+
+
+<div class="footer-widgets widget-count-4">
+
+    <div class="wrap">
+
+        <div class="mt-about-you-widget">
+            <div class="widget footer">
+
+                <img class="mt-about-avatar" src="media/images_home/neidy.jpg" alt="Neidy Helena"/>
+
+
+                <h4>Neidy Helena</h4>
+
+                <div class="mt-about-bio">
+                    <p><br>Meu nome é Neidy e tenho prazer em cozinhar, faço-o como meu trabalho, dedico meu tempo com todo amor e cuidado para proporcionar a melhor experiência aos meus queridos clientes. 
+                        <br>Adoro fazer novos amigos e cozinhar para eles, sempre me certifico de que minha comida esteja deliciosa e que meus clientes saiam felizes. 
+                        <br>Sempre tento novas receitas e experimentos para melhorar minhas habilidades, e estou sempre feliz em compartilhar meu conhecimento e experiência com meus convidados. 
+                        <br>Tenho orgulho do meu trabalho e estou comprometido em fornecer o melhor serviço possível aos meus clientes.</p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="widget footer"><h4>Categories</h4>
+            <ul>
+                <li class="cat-item cat-item-6">
+                    <a href="{% url 'home' %}" title="Pagina Principal">Principal</a>
+                </li>
+                <li class="cat-item cat-item-7">
+                    <a href="{% url 'person:home_map' %}" title="Dados do cliente, endereço e telefone">Dados do cliente</a>
+                </li>
+                <li class="cat-item cat-item-8">
+                    <a href="{% url 'blog_home' %}">Produtos | Compras</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<footer class="footer">
+    <div class="footer-wrap">
+        <div id="footer-text">&copy; 2022 Thiago A.Fideles.
+            Designed by <a href="" target="_blank">Desenvolvedor.</a>.</div>
+
+        <a href="#top" id="btt">Top <i class="fa fa-chevron-up"></i></a>
+    </div>
+</footer>
+
+<div id="topsearch">
+    <div class="table">
+        <div class="table-cell">
+            <form role="search" method="get" class="searchform" action="index.html">
+                <div>
+                    <input type="text" value="" name="s" class="s" placeholder="Type and hit enter"/>
+                    <input type="submit" class="searchsubmit" value="Search"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <a href="#topsearch" class="search-trigger"><i class="fa fa-times"></i></a>
+</div>
+
+
+<script>var ie9 = false;</script>
+<!--[if lte IE 9 ]>
+<script> var ie9 = true; </script>
+
+<script src="{% static 'js_home/jquery-3.0.0.min.js' %}"></script>
+<![endif]-->
+</body>
+</html>

@@ -31,6 +31,8 @@ urlpatterns = [
     path('editar_produto/<int:produto_id>/', views.editar_produto, name='editar_produto'),
     path('excluir_produto/<int:id_produto>/', views.excluir_produto, name='excluir_produto'),
     path('dashboard_produto/', views.dashboard_produto, name='dashboard_produto'),
+    path('todas_as_paginas/', views.todas_as_paginas, name='todas_as_paginas'),
+
 
 
 

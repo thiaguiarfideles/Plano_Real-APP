@@ -1,0 +1,49 @@
+
+{% extends 'agendaFinanceiraApp/base.html' %}
+
+{% block content %}
+<!-- Plano_Real-APP/agendaFinanceira/templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+    <!-- Exemplo de gráfico usando Django Chartjs -->
+    <h2>Total Recebido por Cliente</h2>
+    {% load chartjs %}
+    {% line_chart total_por_cliente as total_por_cliente_chart %} 
+    {{ total_por_cliente_chart.as_html }}
+
+    <!-- Exemplo de tabela usando Django DataTables -->
+    <h2>Total Pago por Período</h2>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'datatables/css/jquery.dataTables.css' %}">
+    <table id="total_por_periodo" class="display">
+        <thead>
+            <tr>
+                <th>Período</th>
+                <th>Total Pago</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in total_por_periodo %}
+                <tr>
+                    <td>{{ item.periodo }}</td>
+                    <td>{{ item.total }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script type="text/javascript" src="{% static 'datatables/js/jquery.dataTables.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#total_por_periodo').DataTable();
+        });
+    </script>
+</body>
+</html>
+{% endblock content %}

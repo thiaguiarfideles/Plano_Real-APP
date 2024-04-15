@@ -402,7 +402,6 @@ class ProdutoAutocomplete(autocomplete.Select2QuerySetView):
 
         return qs
 
-
 @login_required
 def listar_produtos(request):
     produtos = Produto.objects.filter(usuario=request.user)
@@ -438,4 +437,8 @@ def excluir_produto(request, id_produto):
     produto.delete()
     return redirect('agendaFinanceiraApp/listar_produtos')
 
+
+
+def todas_as_paginas(request):
+    return render(request, 'agendaFinanceiraApp/todas_as_paginas.html')
 

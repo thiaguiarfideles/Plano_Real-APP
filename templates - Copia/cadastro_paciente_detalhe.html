@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load model_field %}
+
+{% block content %}
+    <div class='row'>
+    <div class='col-sm-10 col-sm-offset-1'>
+        <table class="table table-hover table-auto">
+            <thead>
+            <tr>
+                <th>Nome Paciente</th>
+                <th>Data de Envio</th>
+                <th>Usuario Logado</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{cadastrospac.paciente}}</td>
+                    <td>{{cadastrospac.date_add}}</td>
+                    <td>{{user.get_full_name}}</td>
+                </tr>
+        </table>
+    </div>
+    </div>
+<div class='row'>
+    <div class='col-sm-10 col-sm-offset-2'>
+
+        <table class="table table-hover table-auto">
+            <tbody>
+                <td><h3>Paciente</h3></td>
+                <tr>
+                    <td>{{cadastrospac.paciente}}</td>
+                </tr>
+                <td><h3>Alergia</h3></td>
+                <tr>
+                    <td>Alergia: {{cadastrospac.alergia}}</td>
+                    <td>Tipo de Alergia: {{cadastrospac.tipo_alergia}}</td> 
+                </tr>
+                <tr>
+                    <td><h3>Dados Pessoais</h3></td>
+                </tr>
+                <td>Endereço: {{cadastrospac.ds_endereco}}     
+                <td>Telefone: {{cadastrospac.telefone}}
+                    </td>
+                </tr>
+                    <td>Email: {{cadastrospac.email}} 
+                    <td>Cidade: {{cadastrospac.cidade}}
+                    </td>
+                </tr>     
+                <tr>
+                    <td><h3>Dados Clinicos</h3></td>
+                </tr>
+                    <td>Idade: {{cadastrospac.idade}}
+                    <td>Sexo: {{cadastrospac.sexo}}
+                    </td>
+                </tr>        
+                    <td>Peso: {{cadastrospac.peso}}    
+                    <td>Altura: {{cadastrospac.altura}}  
+                    </td>
+                </tr>
+                <td><h3>Prontuário</h3></td>
+                <tr>
+                    <td>Medico Paciente: {{cadastrospac.medico_paciente}}</td>
+                </tr>    
+                    <td>Hospital de Referência: {{cadastrospac.hospital}}</td>
+                </tr>        
+                    <td>Plano de Saúde: {{cadastrospac.convenios}}
+                </tr>
+                    <td>Doença Base: {{cadastrospac.cid}}</td>
+                </tr>    
+                    <td>Obesidade: {{cadastrospac.obesidade}}</td>
+                </tr>
+                    <td>Diabetico: {{cadastrospac.diabetico}}</td>
+                </tr>              
+                    <td>Cardiopatia: {{cadastrospac.cardiopata}}</td>
+                </tr>        
+                    <td>Depressão: {{cadastrospac.depressao}}</td>
+                </tr>
+                    <td>Colostomia {{cadastrospac.colostomia}}</td>
+                </tr>
+                    <td>Traqueostomia {{cadastrospac.traqueostomia}}</td>
+                </tr>
+                    <td>Oxigênio {{cadastrospac.oxigenio}}</td>
+                </tr>    
+                    <td>Glasgow {{cadastrospac.glasgow}}</td>
+                </tr>
+                    <td>Dieta: {{cadastrospac.dieta}}</td>
+                </tr>    
+                    <td>Sonda: {{cadastrospac.sonda}}</td>
+                </tr>
+                    <td>Tipo da Dieta: {{cadastrospac.tipo_dieta}}</td>
+                </tr>    
+                    <td>Hora da Dieta: {{cadastrospac.hr_dieta}}</td>
+                </tr>
+                    <td>Admitido com Ferida{{cadastrospac.admitido_ferida}}</td>
+                </tr>
+                   
+
+               </tbody>
+
+        </table>
+
+</div>
+
+{% endblock %}

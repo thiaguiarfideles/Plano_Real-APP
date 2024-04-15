@@ -1,0 +1,27 @@
+{% extends 'agendaFinanceiraApp/base2.html' %}
+
+{% block content %}
+<h1>Todas as Páginas</h1>
+
+<ul>
+    <li><a href="{% url 'cadastrar_cliente' %}">Cadastrar Cliente</a></li>
+    <li><a href="{% url 'cliente_list' %}">Listar Clientes</a></li>
+    <li><a href="{% url 'cadastrar_receita' %}">Cadastrar Receita</a></li>
+    <li><a href="{% url 'receitas_list' %}">Listar Receitas</a></li>
+    <li><a href="{% url 'cadastrar_despesa' %}">Cadastrar Despesa</a></li>
+    <li><a href="{% url 'despesa_list' %}">Listar Despesas</a></li>
+    <li><a href="{% url 'cadastrar_fornecedor' %}">Cadastrar Fornecedor</a></li>
+    <li><a href="{% url 'fornecedor_list' %}">Listar Fornecedores</a></li>
+    <li><a href="{% url 'cadastrar_contasapagar' %}">Cadastrar Contas a Pagar</a></li>
+    <li><a href="{% url 'cadastro_saldoinicial' %}">Cadastrar Saldo Inicial</a></li>
+    <li><a href="{% url 'saldoatual' %}">Visualizar Saldo Atual</a></li>
+    <li><a href="{% url 'saldoatual_list' %}">Listar Saldo Atual</a></li>
+    <li><a href="{% url 'cliente-autocomplete' %}">Autocompletar Cliente</a></li>
+    <li><a href="{% url 'excluir_receita' receita_id=1 %}">Excluir Receita</a></li>
+    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+    <li><a href="{% url 'produto-autocomplete' %}">Autocompletar Produto</a></li>
+    <li><a href="{% url 'listar_produtos' %}">Listar Produtos</a></li>
+    <li><a href="{% url 'cadastrar_produto' %}">Cadastrar Produto</a></li>
+    <li><a href="{% url 'dashboard_produto' %}">Dashboard de Produto</a></li>
+</ul>
+{% endblock %}

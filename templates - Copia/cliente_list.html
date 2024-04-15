@@ -1,0 +1,52 @@
+
+{% extends 'agendaFinanceiraApp/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Lista de Clientes Cadastrados</h1>
+    <input type="text" id="searchInput" placeholder="Pesquisar">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Endereço</th>
+				<th>Telefone</th>
+                <!-- Adicione mais colunas conforme necessário -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in cadastros %}
+			
+            <tr>
+                <td>{{ usuario.nm_cliente }}</td>
+                <td>{{ usuario.endereco }}</td>
+				<td>{{ usuario.telefone }}</td>
+                <!-- Adicione mais colunas conforme necessário -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script>
+    document.getElementById("searchInput").addEventListener("input", function() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.querySelector(".table");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // Change the index to the column you want to filter
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    });
+</script>
+
+
+{% endblock content %}
