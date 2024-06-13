@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualização da Atividade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Atualização da Atividade</h1>
+        </div>
+        <div class="content">
+            <p><strong>Título:</strong> {{ title }}</p>
+            <p><strong>Data Postergada:</strong> {{ postpone_date|date:"d/m/Y H:i" }}</p>
+            <p><strong>Descrição:</strong> {{ description }}</p>
+        </div>
+        <div class="footer">
+            <p>Atualização feita pelo sistema de gestão de tarefas</p>
+        </div>
+    </div>
+</body>
+</html>

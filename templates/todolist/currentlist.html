@@ -5,31 +5,33 @@
 <div class = "row justify-content-center mt-5">
 	<div class = "col-md-10">
 		{% if todos %}
-			<h1>{{ todos.count }} Current Work{{ todos.count|pluralize }}</h1>
+			<h1>{{ todos.count }} Trabalhos Atuais{{ todos.count|pluralize }}</h1>
 		{% else %}
-			<h1>Current Works</h1>
+			<h1></h1>
 		{% endif %}
 	</div>
 </div>
-<div class = "row justify-content-center mt-5">
-	<div class = "col-md-10">
-	{% if todos %}
-            <div class="list-group">
-                {% for todo in todos %}
-                    <a href="{% url 'displaytodolist' todo.id %}" class="list-group-item list-group-item-action{% if todo.priority %} list-group-item-danger{% endif %}"><b>{{ todo.title }}</b>{% if todo.description %} - {{ todo.description|truncatechars:30 }}{% endif %}</a>
-                {% endfor %}
-            </div>
-		<button  class = "btn btn-primary" onclick="CreatePDFfromHTML()">GENERATE PDF </button>
-        {% else %}
-                <div class="text-center">
-                <h2>Looks like you don't have any todos! Nice work.</h2>
-            <br>
-            <a role="button" class="btn btn-primary" href="{% url 'createtodolist' %}">New work</a>
-            </div>
-		{% endif %}
-	</div>
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+        <h2>Atividades em andamento</h2>
+        <div class="list-group">
+            {% for todo in todos %}
+                <a href="{% url 'displaytodolist' todo.id %}" class="list-group-item list-group-item-action{% if todo.priority %} list-group-item-danger{% endif %}">
+                    <b>{{ todo.title }}</b>
+                    {% if todo.description %} - {{ todo.description|truncatechars:50 }}{% endif %}
+                    {% if todo.event_datetime %} - {{ todo.event_datetime|date:"d M Y H:i" }}{% endif %}
+                </a>
+                <div>
+                    <form method="POST" action="{% url 'completetodolist' todo.pk %}">
+                      {% csrf_token %}
+                      <button type="submit" class="btn btn-primary">Marcar como Concluída</button>
+                    </form>
+                  </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
-</div>
+
 
 <script>
 	function CreatePDFfromHTML() {

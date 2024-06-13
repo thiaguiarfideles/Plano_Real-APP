@@ -63,16 +63,22 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
 					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="{% url 'admin:index' %}">Admin</a>
+						<a class="nav-link link text-black display-9" href="{% url 'admin:index' %}">Admin</a>
 					</li>
                     <li class="nav-item">
-						<a class="nav-link link text-black display-4" href="{% url 'cadastrar_receita' %}">Cadastrar Receita</a>
+						<a class="nav-link link text-black display-9" href="{% url 'cadastrar_receita' %}">Cadastrar Receita</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link link text-black display-9" href="{% url 'listar_produtos' %}">Cadastrar Produtos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link link text-black display-4" href="{% url 'dashboard' %}">Dash Receita Cliente</a>
+						<a class="nav-link link text-black display-9" href="{% url 'dashboard' %}">Dash Receita Cliente</a>
 					</li>
                     <li class="nav-item">
-						<a class="nav-link link text-black display-4" href="{% url 'dashboard_produto' %}">Dash Receita Produto</a>
+						<a class="nav-link link text-black display-9" href="{% url 'dashboard_produto' %}">Dash Receita Produto</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link link text-black display-9" href="{% url 'home_todo' %}">Gerência atividades</a>
 					</li>
 				</ul>
 				
@@ -94,7 +100,7 @@
           </h1>
           <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Gerencie suas finanças com facilidade e estilo. Entre no mundo da prosperidade financeira!</p>
           <div class="mbr-section-btn">
-            <a class="btn btn-white-outline display-7" href="{% url 'auth_login' %}">Começar Agora</a>
+            <a class="btn btn-white-outline display-7" href="{% url 'login' %}">Começar Agora</a>
           </div>
         </div>
       </div>

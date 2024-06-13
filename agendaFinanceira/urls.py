@@ -3,7 +3,7 @@ from agendaFinanceira import views
 from agendaFinanceira.models import Fornecedor
 from django_select2.views import AutoResponseView
 from .models import Cliente, Receita, Despesa, LancamentoContasPagar, Fornecedor, SaldoAtual, SaldoInicial, Produto
-from .views import ClienteAutocomplete, cadastrar_receita,cadastrar_fornecedor,cadastrar_contasapagar,cadastrar_despesa,cadastrar_cliente,saldoinicial,saldoatual,update_saldo_atual,cliente_list,fornecedor_list,despesa_list,receitas_list,saldoatual_list,excluir_receita,dashboard, cadastrar_produto,editar_produto,excluir_produto,ProdutoAutocomplete
+from .views import ClienteAutocomplete, cadastrar_receita, cadastrar_fornecedor, cadastrar_contasapagar, cadastrar_despesa,cadastrar_cliente,saldoinicial,saldoatual,update_saldo_atual,cliente_list,fornecedor_list,despesa_list,receitas_list,saldoatual_list,excluir_receita,dashboard, cadastrar_produto,editar_produto,excluir_produto, ProdutoAutocomplete, get_financial_data_view
 
 urlpatterns = [
     path('cadastrar_cliente/', views.cadastrar_cliente, name='cadastrar_cliente'),
@@ -32,11 +32,5 @@ urlpatterns = [
     path('excluir_produto/<int:id_produto>/', views.excluir_produto, name='excluir_produto'),
     path('dashboard_produto/', views.dashboard_produto, name='dashboard_produto'),
     path('todas_as_paginas/', views.todas_as_paginas, name='todas_as_paginas'),
-
-
-
-
-
-
-    # Adicione outras URLs conforme necessário
+    path('get_financial_data_view/', views.get_financial_data_view, name='get_financial_data_view'),
 ]

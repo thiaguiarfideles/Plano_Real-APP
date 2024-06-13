@@ -1,0 +1,53 @@
+{% extends 'agendaFinanceiraApp/base.html' %}
+
+{% block content %}
+<h1>Análise Financeira</h1>
+
+<h2>Dados de Entrada (X)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Quantidade Receita</th>
+            <th>Valor Receita</th>
+            <th>Quantidade Despesa</th>
+            <th>Valor Despesa</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if X %}
+            {% for row in X %}
+            <tr>
+                <td>{{ row.quantidade_receita }}</td>
+                <td>{{ row.valor_receita }}</td>
+                <td>{{ row.quantidade_despesa }}</td>
+                <td>{{ row.valor_despesa }}</td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr><td colspan="4">Nenhum dado encontrado</td></tr>
+        {% endif %}
+    </tbody>
+</table>
+
+<h2>Resultados Previstos (y)</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Resultado Previsto</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if y %}
+            {% for value in y %}
+            <tr>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr><td>Nenhum resultado previsto encontrado</td></tr>
+        {% endif %}
+    </tbody>
+</table>
+
+<a href="{% url 'home' %}">Voltar para o Início</a>
+{% endblock %}

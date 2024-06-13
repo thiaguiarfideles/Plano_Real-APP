@@ -20,14 +20,15 @@ from .models import Cliente, Fornecedor, LancamentoContasPagar, Receita, Despesa
 
 from agendaFinanceira.forms import ( ClienteForm, FornecedorForm, ReceitaForm, DespesaForm, LancamentoContasPagarForm, SaldoAtlForm, SaldoForm, ProdutoForm)
 from .serializers import DespesaSerializer, ReceitaSerializer, ClienteSerializer
+from .utils import get_financial_data
 from dal import autocomplete
 import logging
 from django.db.models import Sum,Func, Count
 from django.db.models.functions import ExtractYear, ExtractMonth
 from django.db.models import F, ExpressionWrapper, DecimalField
 from agendaFinanceira.filters import register
-
-
+import pandas as pd
+import pickle
 import datetime
 
 
@@ -441,4 +442,91 @@ def excluir_produto(request, id_produto):
 
 def todas_as_paginas(request):
     return render(request, 'agendaFinanceiraApp/todas_as_paginas.html')
+
+
+# Carregue o modelo treinado
+with open('financial_model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+# Função para obter dados financeiros (esta pode ser a mesma do script de treinamento)
+def get_financial_data():
+    # Obter as receitas do banco de dados
+    receitas_queryset = Receita.objects.all().values(
+        'data_entrada', 'quantidade', 'valor', 'cliente__nm_cliente', 'forma_recebimento', 'situacao', 'observacoes'
+    )
+    df_receitas = pd.DataFrame(receitas_queryset)
+    print("DataFrame Receitas original:")
+    print(df_receitas.head())
+    
+    df_receitas.rename(columns={'data_entrada': 'data', 'quantidade': 'quantidade_receita', 'valor': 'valor_receita'}, inplace=True)
+    print("DataFrame Receitas após renomear colunas:")
+    print(df_receitas.head())
+    
+    # Obter as despesas do banco de dados
+    despesas_queryset = Despesa.objects.all().values(
+        'data_vencimento', 'valor', 'nome_credor__nm_fornecedor', 'situacao', 'observacoes', 'tipo_despesa', 'modo_pag'
+    )
+    df_despesas = pd.DataFrame(despesas_queryset)
+    print("DataFrame Despesas original:")
+    print(df_despesas.head())
+    
+    if not df_despesas.empty:
+        df_despesas.rename(columns={'data_vencimento': 'data', 'valor': 'valor_despesa'}, inplace=True)
+        df_despesas['quantidade_despesa'] = 1  # Adicionar coluna quantidade_despesa com valor padrão
+    else:
+        # Adiciona colunas necessárias com valores padrão se não houver despesas
+        df_despesas['data'] = []
+        df_despesas['valor_despesa'] = []
+        df_despesas['quantidade_despesa'] = []
+        
+    print("DataFrame Despesas após renomear colunas:")
+    print(df_despesas.head())
+
+    return df_receitas, df_despesas
+
+@login_required
+def get_financial_data_view(request):
+    df_receitas, df_despesas = get_financial_data()
+
+    # Verificar se as colunas 'data' estão presentes
+    if 'data' not in df_receitas.columns:
+        raise KeyError("'data' column is missing in df_receitas")
+    if 'data' not in df_despesas.columns:
+        raise KeyError("'data' column is missing in df_despesas")
+    
+    # Mesclar DataFrames de receitas e despesas com base na coluna 'data'
+    df = pd.merge(df_receitas, df_despesas, on="data", how="outer").fillna(0)
+    
+    # Verificar se a coluna 'data' está presente após a mesclagem
+    if 'data' not in df.columns:
+        raise KeyError("'data' column is missing after merging df_receitas and df_despesas")
+    
+    # Verificar se as colunas necessárias estão presentes e preencher valores nulos
+    required_columns = ['quantidade_receita', 'valor_receita', 'quantidade_despesa', 'valor_despesa']
+    for column in required_columns:
+        if column not in df.columns:
+            df[column] = 0
+        else:
+            df[column] = df[column].fillna(0)
+    
+    # Selecionar as colunas para X
+    X = df[['quantidade_receita', 'valor_receita', 'quantidade_despesa', 'valor_despesa']]
+    
+    # Faça previsões usando o modelo
+    y = model.predict(X)
+    
+    # Transformar os dados para renderizar no template
+    X = X.to_dict(orient='records')
+    y = y.tolist()
+
+    # Adicionar prints para depuração
+    print("Dados de Entrada (X):", X)
+    print("Resultados Previstos (y):", y)
+
+    context = {
+        'X': X,
+        'y': y
+    }
+
+    return render(request, 'agendaFinanceiraApp/financial_data.html', context)
 
